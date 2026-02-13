@@ -65,9 +65,11 @@
     }
 
     .section h3{
-      margin: 0 0 12px 0;
-      font-size: 1.4rem;
-    }
+  margin: 0 0 14px 0;
+  font-size: 1.55rem;
+  font-weight: 600;
+  letter-spacing: 0.3px;
+}
 
     .section p{
       margin: 0 0 18px 0;
@@ -78,33 +80,40 @@
     .grid{
       display: grid;
       grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 20px;
+      gap: 26px;
     }
 
     .card{
-      background: var(--panel);
-      border: 1px solid var(--line);
-      border-radius: var(--radius);
-      box-shadow: var(--shadow);
-      padding: 18px 18px;
-    }
+  background: var(--panel);
+  border: 1px solid var(--line);
+  border-radius: var(--radius);
+  box-shadow: var(--shadow);
+  padding: 18px 18px;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+.card:hover{
+  transform: translateY(-4px);
+  box-shadow: 0 24px 64px rgba(0,0,0,0.55);
+}
 
     .card h4{
-      margin: 0 0 6px 0;
-      font-size: 1.15rem;
-    }
+  margin: 0 0 8px 0;
+  font-size: 1.18rem;
+  font-weight: 600;
+}
 
-    .card p{
-      margin: 0 0 10px 0;
-      color: var(--muted);
-      font-size: 0.98rem;
-    }
+   .card p{
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  font-size: 1rem;
+}
 
     .links a{
-      display: inline-block;
-      margin-right: 12px;
-      font-size: 0.95rem;
-    }
+  display: inline-block;
+  margin-right: 14px;
+  font-size: 0.96rem;
+  font-weight: 500;
+}
 
     .badge{
       display: inline-block;
@@ -133,8 +142,7 @@
 <header>
   <h1>AAD Systems™</h1>
   <h2>
-    A research-driven software lab building semantic compilers, deterministic systems,
-    and policy-grade infrastructure.  
+    A research-driven software lab building semantic compilers and deterministic infrastructure 
     We transform ambiguous metric descriptions into invariant semantic structures.
   </h2>
 </header>
@@ -153,11 +161,11 @@
 </p>
      <!-- SELECTED RELATIVITY PAPERS -->
     <div style="margin-top: 36px;">
-      <h4 style="margin-bottom: 10px; font-size: 1.15rem;">
-        Selected Relativity Papers
-      </h4>
+      <h3 style="margin-top: 36px;">
+  Selected Relativity Papers
+</h3>
 
-      <p style="color: var(--muted); max-width: 760px; margin-bottom: 18px;">
+      <p style="color: var(--muted); max-width: 760px; margin-bottom: 28px;">
         Two foundational papers presenting relativity as a structural theory of invariant meaning.  These works formalize observational equivalence, regime structure, and semantic invariance as the organizing principles of physical interpretation.
       </p>
 
