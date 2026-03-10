@@ -26,6 +26,7 @@ html {
     html, body { height: 100%; }
     body{
       margin:0;
+        margin-top:10px;
       font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Helvetica, Arial;
       background:
         radial-gradient(1200px 700px at 20% 10%, rgba(138,180,255,0.20), transparent 60%),
@@ -172,6 +173,7 @@ html {
 
 .status.active{
   color:var(--accent2);
+  font-weight:700;
 }
 
 .status.research{
@@ -182,15 +184,41 @@ html {
   color:#f5c26b;
 }
 .instrument-bar{
+  position:relative;
   display:flex;
   justify-content:space-between;
   align-items:center;
   padding:6px 18px;
   font-size:0.85rem;
   border-bottom:1px solid var(--line);
-  background:rgba(0,0,0,0.35);
-  backdrop-filter: blur(4px);
+
+  background:rgba(5,10,25,0.9);
+
+  box-shadow:
+    0 0 20px rgba(138,180,255,0.55),
+    0 6px 20px rgba(0,0,0,0.55);
+
+  backdrop-filter: blur(6px);
 }
+
+.instrument-bar::after{
+  content:"";
+  position:absolute;
+  left:0;
+  top:0;
+  height:2px;
+  width:100%;
+  background:linear-gradient(90deg, transparent, var(--accent2), transparent);
+  animation: scan 6s linear infinite;
+  opacity:0.5;
+}
+
+@keyframes scan{
+  0% { transform: translateX(-100%); }
+  100% { transform: translateX(100%); }
+}
+
+
 
 .instrument-nav a{
   margin-left:18px;
@@ -213,7 +241,15 @@ html {
   border-radius:50%;
   background:var(--accent2);
   margin-right:8px;
-  box-shadow:0 0 6px var(--accent2);
+
+  box-shadow:0 0 8px var(--accent2);
+  animation: ledPulse 2.5s infinite ease-in-out;
+}
+
+@keyframes ledPulse{
+  0% { box-shadow:0 0 4px var(--accent2); opacity:0.8; }
+  50% { box-shadow:0 0 12px var(--accent2); opacity:1; }
+  100% { box-shadow:0 0 4px var(--accent2); opacity:0.8; }
 }
 
 .timeline{
