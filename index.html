@@ -161,6 +161,10 @@ html {
   padding:12px 14px;
 
   font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing:0.04em;
+      text-shadow:0 0 6px rgba(176,255,207,0.35);
+
+
 
   background:
     repeating-linear-gradient(
@@ -349,7 +353,7 @@ html {
   <h1>AAD Systems™</h1>
   <h2>
 Compilers and formal computational systems
-for research, experimentation, and structural analysis.
+for deterministic infrastructure, verification, and structural analysis.
   </h2>
 </header>
 <main>
@@ -367,6 +371,36 @@ for research, experimentation, and structural analysis.
   <div class="bar"></div>
   <div class="bar"></div>
 </div>
+
+<section class="section">
+
+<h3>Research Output Monitor</h3>
+
+<div class="status-strip">
+
+  <div class="status-row">
+    <span>Compiler Systems</span>
+    <span class="status active">3 ACTIVE</span>
+  </div>
+
+  <div class="status-row">
+    <span>Research Papers</span>
+    <span class="status active">6 PUBLISHED</span>
+  </div>
+
+  <div class="status-row">
+    <span>Verification Systems</span>
+    <span class="status active">VERIX / AEGON</span>
+  </div>
+
+  <div class="status-row">
+    <span>Next Research Target</span>
+    <span class="status dev">Transformer Simulator</span>
+  </div>
+
+</div>
+
+</section>
 
 <h3>About the Lab</h3>
 
@@ -386,7 +420,7 @@ Research spans three structural layers:
 </p>
 
 </section>
-<section class="section">
+<section class="section" id="system-status">
   <h3>System Status</h3>
 
   <div class="status-strip">
@@ -405,6 +439,14 @@ Research spans three structural layers:
       <span class="status research">RESEARCH</span>
     </div>
 
+<div class="status-row">
+  <span>VERIX Compiler</span>
+  <span class="status active">ACTIVE</span>
+</div>
+<div class="status-row">
+  <span>Research Papers</span>
+  <span class="status active" id="paper-count">INDEXING</span>
+</div>
     <div class="status-row">
       <span>Transformer LLM Simulator</span>
       <span class="status dev">DEVELOPMENT</span>
@@ -494,7 +536,31 @@ Research spans three structural layers:
           embeddings, and MLP structure for research and education.
         </p>
       </div>
+<div class="card">
+  <h4>VERIX Core</h4>
+  <p>
+    A deterministic logic verification engine that evaluates formally
+    encoded rule systems and infrastructure logic using canonical
+    Gödel-numbered representations.
+  </p>
+  <div class="links">
+    <a href="https://verix.aadsystems.com/">Application</a>
+    <a href="https://docs.verix.aadsystems.com/">Documentation</a>
+  </div>
+</div>
 
+<div class="card">
+  <h4>VERIX Compiler</h4>
+  <p>
+    A verification compiler that transforms rule systems into canonical
+    logical artifacts suitable for deterministic verification within
+    the VERIX Core engine.
+  </p>
+  <div class="links">
+    <a href="https://aadsystems.com/papers/Verix_Godel_Encoding.pdf">Paper</a>
+    <a href="https://docs.verix.aadsystems.com/compiler/">Documentation</a>
+  </div>
+</div>
       <div class="card">
         <h4>CMOS Silicon Compiler <span class="badge">Upcoming</span></h4>
         <p>
@@ -524,9 +590,9 @@ Research spans three structural layers:
       continuous transformation groups.
     </p>
 
-    <div class="card" style="margin-top: 18px;">
-      <h4>
-        The Inevitability of Lie Algebras from Continuous Symmetry
+    <div class="card paper" style="margin-top: 18px;">
+<h4>
+The Inevitability of Lie Algebras from Continuous Symmetry
         <span class="badge">Algebraic Geometry</span>
       </h4>
 
@@ -550,9 +616,8 @@ Research spans three structural layers:
   <section class="section">
     <h3>New Paper Release · 2026</h3>
 
-    <div class="card" style="margin-top: 18px;">
-      <h4>Special Relativity Regime Compiler (SRRC)</h4>
-
+    <div class="card paper" style="margin-top: 18px;">
+<h4>Special Relativity Regime Compiler (SRRC)</h4>
       <p>
         A reduced instruction set formulation of relativistic invariants.
         This work isolates the invariant algebra of Special Relativity by
@@ -573,7 +638,33 @@ Research spans three structural layers:
       </div>
     </div>
   </section>
+<!-- FORMAL LOGIC & COMPUTATION -->
+<section class="section">
+  <h3>Formal Logic & Computation</h3>
 
+  <p>
+    AAD Systems develops formal computational systems grounded in logic,
+    Gödel encoding, and deterministic semantic execution.
+  </p>
+
+  <div class="card" style="margin-top: 18px;">
+    <h4>Executable Gödel Encodings for Deterministic Logic Systems</h4>
+
+    <p>
+      This paper introduces a canonical method for embedding logical
+      expressions into executable computational structures using
+      Gödel numbering. The work forms the logical foundation for the
+      VERIX verification infrastructure.
+    </p>
+
+    <div class="links">
+      <a href="https://aadsystems.com/papers/Verix_Godel_Encoding.pdf"
+         target="_blank" rel="noopener">
+         Paper (PDF)
+      </a>
+    </div>
+  </div>
+</section>
   <!-- RELATIVITY & OBSERVATION -->
   <section class="section">
     <h3>Relativity, Observation & Semantic Physics</h3>
@@ -596,7 +687,7 @@ Research spans three structural layers:
 
       <div class="grid">
 
-        <div class="card">
+        <div class="card paper">
   <h4>Semantic Relativity — A Completion of Special Relativity</h4>
   <p>
     A structural completion of Special Relativity showing that
@@ -609,7 +700,7 @@ Research spans three structural layers:
   </div>
 </div>
 
-        <div class="card">
+        <div class="card paper">
   <h4>The Relativity Principle (Regime Formulation)</h4>
   <p>
     A general structural formulation of relativity as a constraint on meaning:
@@ -626,7 +717,7 @@ Research spans three structural layers:
 
 </main>
   <footer>
-    © 2026 AAD Systems™ · Research-Driven Semantic Software
+    © 2026 AAD Systems™ · Research Laboratory for Deterministic Software Systems
   </footer>
   <!-- Default Statcounter code for AAD Systems
 https://www.aadsystems.com/ -->
@@ -647,14 +738,27 @@ referrerPolicy="no-referrer-when-downgrade"></a></div></noscript>
 <!-- End of Statcounter Code -->
 
 <script>
+
 function updateClock(){
   const now = new Date().toISOString().substring(0,19);
-
-  document.getElementById("lab-clock").textContent =
-    now + "Z";
+  document.getElementById("lab-clock").textContent = now + "Z";
 }
+
 setInterval(updateClock,1000);
 updateClock();
+
+function updatePaperCount(){
+  const papers = document.querySelectorAll(".paper");
+  const count = papers.length;
+
+  const label = document.getElementById("paper-count");
+  if(label){
+    label.textContent = count + " PUBLISHED";
+  }
+}
+
+updatePaperCount();
+
 </script>
 
   </body>
