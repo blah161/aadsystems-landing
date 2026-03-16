@@ -324,6 +324,46 @@ html {
 .event{
   color:var(--muted);
 }
+.terminal-panel{
+  background:#050a18;
+  border:1px solid var(--line);
+  border-radius:10px;
+  padding:16px;
+  max-width:720px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  box-shadow: inset 0 0 12px rgba(176,255,207,0.08);
+}
+
+.terminal-header{
+  color:var(--accent2);
+  margin-bottom:10px;
+  font-weight:600;
+  letter-spacing:0.08em;
+}
+
+.terminal-table{
+  width:100%;
+  border-collapse:collapse;
+}
+
+.terminal-table th{
+  text-align:left;
+  padding:6px 0;
+  border-bottom:1px solid var(--line);
+  color:var(--faint);
+}
+
+.terminal-table td{
+  padding:6px 0;
+}
+
+.status-active{
+  color:var(--accent2);
+}
+
+.status-dev{
+  color:#f5c26b;
+}
   </style>
 </head>
 
@@ -451,6 +491,66 @@ Research spans three structural layers:
       <span>Transformer LLM Simulator</span>
       <span class="status dev">DEVELOPMENT</span>
     </div>
+  </div>
+</section>
+<section class="section">
+  <h3>Systems Console</h3>
+
+  <div class="terminal-panel">
+
+    <div class="terminal-header">
+      AAD SYSTEMS — OPERATIONAL DASHBOARD
+    </div>
+
+    <table class="terminal-table">
+
+      <tr>
+        <th>System</th>
+        <th>Status</th>
+      </tr>
+
+      <tr>
+        <td>eCASM Compiler</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>LinkPilot</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>AEGON Core</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>AEGON Policy Compiler</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>VERIX Core</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>VERIX Compiler</td>
+        <td class="status-active">ONLINE</td>
+      </tr>
+
+      <tr>
+        <td>Transformer Simulator</td>
+        <td class="status-dev">DEVELOPMENT</td>
+      </tr>
+
+      <tr>
+        <td>CMOS Silicon Compiler</td>
+        <td class="status-dev">RESEARCH</td>
+      </tr>
+
+    </table>
+
   </div>
 </section>
 
@@ -606,7 +706,7 @@ The Inevitability of Lie Algebras from Continuous Symmetry
   <a href="https://aadsystems.com/papers/Inevitability_of_Lie_Algebras_from_Continuous_Symmetry_and_Its_Renormalization_Group_Analogue.pdf"
      target="_blank"
      rel="noopener">
-     Read the Paper (PDF)
+     Read the Paper (Executable Gödel Encodings)
   </a>
 </div>
     </div>
