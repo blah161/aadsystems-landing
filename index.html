@@ -364,6 +364,13 @@ html {
 .status-dev{
   color:#f5c26b;
 }
+.cursor{
+  animation: blink 1s steps(2,start) infinite;
+}
+
+@keyframes blink{
+  to { visibility: hidden; }
+}
   </style>
 </head>
 
@@ -461,7 +468,7 @@ Research spans three structural layers:
 
 </section>
 <section class="section" id="system-status">
-  <h3>System Status</h3>
+  <h3>Development Status</h3>
 
   <div class="status-strip">
     <div class="status-row">
@@ -550,7 +557,9 @@ Research spans three structural layers:
       </tr>
 
     </table>
-
+<div style="margin-top:10px;">
+AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
+</div>
   </div>
 </section>
 
