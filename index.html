@@ -432,7 +432,7 @@ for deterministic infrastructure, verification, and structural analysis.
 
   <div class="status-row">
     <span>Research Papers</span>
-    <span class="status active">6 PUBLISHED</span>
+    <span class="status active" id="paper-count-monitor">INDEXING</span>
   </div>
 
   <div class="status-row">
@@ -654,8 +654,9 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
   </p>
   <div class="links">
     <a href="https://verix.aadsystems.com/">Application</a>
+    <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
     <a href="https://docs.verix.aadsystems.com/">Documentation</a>
-  </div>
+</div>
 </div>
 
 <div class="card">
@@ -715,7 +716,7 @@ The Inevitability of Lie Algebras from Continuous Symmetry
   <a href="https://aadsystems.com/papers/Inevitability_of_Lie_Algebras_from_Continuous_Symmetry_and_Its_Renormalization_Group_Analogue.pdf"
      target="_blank"
      rel="noopener">
-     Read the Paper (Executable Gödel Encodings)
+     Read the Inevitability of Lie Algebras Paper
   </a>
 </div>
     </div>
@@ -769,7 +770,7 @@ The Inevitability of Lie Algebras from Continuous Symmetry
     <div class="links">
       <a href="https://aadsystems.com/papers/godel_runtime_paper.pdf"
    target="_blank" rel="noopener">
-   Paper (PDF)
+   Read the Executable Gödel Encodings Paper
 </a>
     </div>
   </div>
@@ -861,9 +862,14 @@ function updatePaperCount(){
   const count = papers.length;
 
   const label = document.getElementById("paper-count");
-  if(label){
-    label.textContent = count + " PUBLISHED";
-  }
+if(label){
+  label.textContent = count + " PUBLISHED";
+}
+
+const label2 = document.getElementById("paper-count-monitor");
+if(label2){
+  label2.textContent = count + " PUBLISHED";
+}
 }
 
 updatePaperCount();
