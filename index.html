@@ -398,10 +398,23 @@ html {
 
 <header>
   <h1>AAD Systems™</h1>
+
   <h2>
-Compilers and formal computational systems
-for deterministic infrastructure, verification, and structural analysis.
+Deterministic compilers and formal computational systems
+for verification, infrastructure, and structural analysis.
   </h2>
+
+  <div style="
+    margin-top:18px;
+    font-size:1.05rem;
+    font-weight:500;
+    color:var(--accent2);
+    letter-spacing:0.04em;
+    max-width:720px;
+  ">
+    Meaning is invariance under admissible transformations.
+  </div>
+
 </header>
 <main>
 
@@ -449,22 +462,136 @@ for deterministic infrastructure, verification, and structural analysis.
 
 </section>
 
-<h3>About the Lab</h3>
+<section class="section">
+  <h3>About the Lab</h3>
 
-<p>
-AAD Systems™ is an independent research laboratory developing
-deterministic compilers and formal computational systems.
-</p>
+  <p>
+    AAD Systems™ is an independent research laboratory developing
+    deterministic compilers and formal computational systems.
+  </p>
 
-<p>
-Research spans three structural layers:
-</p>
+  <p>
+    Research spans three structural layers:
+  </p>
 
-<p>
-• Deterministic Compilers<br>
-• Operational Semantic Systems<br>
-• Mathematical Foundations of Invariance and Symmetry
-</p>
+  <p>
+    • Deterministic Compilers<br>
+    • Operational Semantic Systems<br>
+    • Mathematical Foundations of Invariance and Symmetry
+  </p>
+</section>
+<section class="section" id="systems-lab">
+
+  <h3>Systems Lab — Foundational Thesis</h3>
+
+  
+
+  <p>
+    The central thesis of the lab is that meaning is not statistical, approximate,
+    or emergent from data, but instead arises from invariance under admissible
+    transformations. A system is correct precisely when its outputs descend to
+    invariant structure.
+  </p>
+
+  <p>
+    This perspective unifies logic, computation, and physical theory under a single
+    structural principle: execution is a form of semantic descent, and compilers
+    are mechanisms for enforcing invariant meaning.
+  </p>
+
+
+
+  <p>
+    These domains are not independent. Foundational results are realized directly
+    as executable systems, and systems are exposed through compilers that make
+    their structure explicit and enforceable.
+  </p>
+
+  <p>
+    The lab therefore operates as a closed loop between mathematics and execution:
+    theory produces systems, systems validate theory, and compilers serve as the
+    interface between the two.
+  </p>
+
+  <p>
+    Current work includes semantic compilers, verification engines, Gödel-based execution systems, and regime-theoretic physical models.
+  </p>
+
+</section>
+
+<section class="section">
+  <h3>Core Principle</h3>
+
+  <p style="font-size:1.1rem; color:var(--accent2); max-width:720px;">
+    Meaning is invariance under admissible transformations.
+  </p>
+
+  <p>
+    All systems developed within the lab are implementations of this principle.
+  </p>
+</section>
+
+<section class="section" id="research-program">
+
+  <h3>Research Program</h3>
+
+  
+
+  <p>
+    The research program translates the lab’s foundational principles into concrete systems, compilers, and formal results.
+
+Work is organized into domains that produce both theoretical structures and executable implementations.
+  </p>
+
+  <div class="grid" style="margin-top:18px;">
+
+    <div class="card">
+      <h4>Foundations of Meaning & Invariance</h4>
+      <p>
+        Formalization of meaning as invariance under admissible transformations. 
+        Includes Gödel encoding, semantic descent, and logical execution systems.
+      </p>
+      <div class="links">
+        <a href="https://aadsystems.com/papers/godel_runtime_paper.pdf">Gödel Encodings</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Deterministic Semantic Infrastructure</h4>
+      <p>
+        Executable systems enforcing invariant structure in operational environments. 
+        Systems are deterministic, auditable, and structurally complete.
+      </p>
+      <div class="links">
+        <a href="https://aegon-core.onrender.com/">AEGON Core</a>
+        <a href="https://verix.aadsystems.com/">VERIX Core</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Compiler Systems</h4>
+      <p>
+        Domain-specific compilers enforcing invariant structure at execution level, 
+        including algebraic, logical, and physical compilers.
+      </p>
+      <div class="links">
+        <a href="https://ecasm.aadsystems.com/">eCASM</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Relativity & Regime Theory</h4>
+      <p>
+        Reformulation of physical theories as regime systems in which meaning 
+        is defined by invariance under transformation.
+      </p>
+      <div class="links">
+        <a href="http://aadsystems.com/papers/Semantic_Relativity__A_Completion_of_Special_Relativity.pdf">Semantic Relativity</a>
+        <a href="http://aadsystems.com/papers/The_Relativity_Principle__Regime_Formulation___Invariance__Meaning__and_Regime_Structure.pdf">Relativity Principle</a>
+      </div>
+    </div>
+
+  </div>
 
 </section>
 <section class="section" id="system-status">
@@ -592,8 +719,13 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 </section>
 
 <!-- COMPILERS -->
-  <section class="section" id="systems">
-    <h3>Compiler Systems</h3>
+<div class="research-divider" style="margin-top:40px;">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+
+<section class="section" id="systems">    <h3>Operational Systems</h3>
     <p>
       AAD Systems builds compilers as semantic artifacts—deterministic, auditable, and structurally complete.
 
@@ -795,7 +927,7 @@ The Inevitability of Lie Algebras from Continuous Symmetry
         Two foundational papers presenting relativity as a structural theory of invariant meaning.  These works formalize observational equivalence, regime structure, and semantic invariance as the organizing principles of physical interpretation.
       </p>
 
-      <div class="grid">
+           <div class="grid">
 
         <div class="card paper">
   <h4>Semantic Relativity — A Completion of Special Relativity</h4>
@@ -822,13 +954,36 @@ The Inevitability of Lie Algebras from Continuous Symmetry
        target="_blank" rel="noopener">Paper (PDF)</a>
   </div>
 </div>
-  </section>
 
+</div>
+
+</div>
+
+  </section>
 
 </main>
   <footer>
-    © 2026 AAD Systems™ · Research Laboratory for Deterministic Software Systems
-  </footer>
+
+  <div style="margin-bottom:10px; font-weight:600; letter-spacing:0.08em;">
+    AAD SYSTEMS™ · SYSTEMS LAB
+  </div>
+
+  <div style="margin-bottom:14px; color: var(--muted);">
+    Deterministic Compilers · Semantic Infrastructure · Mathematical Systems
+  </div>
+
+  <div style="margin-bottom:14px;">
+    <a href="#research">Research</a>
+    <a href="#systems">Systems</a>
+    <a href="#papers">Papers</a>
+    <a href="https://aadsystems.com" target="_blank">Main Site</a>
+  </div>
+
+  <div style="color: var(--faint); font-size:0.85rem;">
+    © 2026 AAD Systems™ · Independent Research Laboratory
+  </div>
+
+</footer>
   <!-- Default Statcounter code for AAD Systems
 https://www.aadsystems.com/ -->
 <script type="text/javascript">
