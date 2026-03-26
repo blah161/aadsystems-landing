@@ -493,6 +493,10 @@ for verification, infrastructure, and structural analysis.
     invariant structure.
   </p>
 
+  <p style="font-size:1.05rem; color:var(--accent2); font-weight:500; max-width:720px;">
+    AEGON prevents entire classes of system failure by enforcing invariant system states before execution.
+</p>
+
   <p>
     This perspective unifies logic, computation, and physical theory under a single
     structural principle: execution is a form of semantic descent, and compilers
@@ -563,9 +567,8 @@ Work is organized into domains that produce both theoretical structures and exec
         Systems are deterministic, auditable, and structurally complete.
       </p>
       <div class="links">
-        <a href="https://aegon-core.onrender.com/">AEGON Core</a>
-        <a href="https://verix.aadsystems.com/">VERIX Core</a>
-      </div>
+  <a href="https://aegon-core.onrender.com/">AEGON Core</a>
+</div>
     </div>
 
     <div class="card">
@@ -615,7 +618,7 @@ Work is organized into domains that produce both theoretical structures and exec
 
 <div class="status-row">
   <span>VERIX Compiler</span>
-  <span class="status active">ACTIVE</span>
+  <span class="status dev">DEVELOPMENT</span>
 </div>
 <div class="status-row">
   <span>Research Papers</span>
@@ -659,19 +662,19 @@ Work is organized into domains that produce both theoretical structures and exec
       </tr>
 
       <tr>
-        <td>AEGON Policy Compiler</td>
-        <td class="status-active">ONLINE</td>
+        <<td>AEGON Policy Compiler</td>
+<td class="status-dev">SPECIFICATION</td>
       </tr>
 
       <tr>
-        <td>VERIX Core</td>
-        <td class="status-active">ONLINE</td>
-      </tr>
+  <td>VERIX Core</td>
+  <td class="status-dev">DEVELOPMENT</td>
+</tr>
 
-      <tr>
-        <td>VERIX Compiler</td>
-        <td class="status-active">ONLINE</td>
-      </tr>
+<tr>
+  <td>VERIX Compiler</td>
+  <td class="status-dev">DEVELOPMENT</td>
+</tr>
 
       <tr>
         <td>Transformer Simulator</td>
@@ -734,14 +737,15 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     <div class="grid">
 
       <div class="card">
-        <h4>eCASM Compiler</h4>
-        <p>
-          An algebraic / quantum-inspired compiler exposing instruction-level structure
-          for research, education, and formal reasoning.
-        </p>
-       <div class="links">
-  <a href="https://ecasm.aadsystems.com/">Application</a>
-  <a href="https://ecasm.aadsystems.com/static/documentation.html">Developer Guide</a>
+  <h4>AEGON Policy Compiler <span class="badge">Specification</span></h4>
+  <p>
+    A formally defined deterministic compiler that maps AEGON failure semantics
+    into canonical policy algebra. Currently specified at the mathematical level,
+    with implementation forthcoming.
+  </p>
+  <div class="links">
+    <a href="https://docs.aegon.aadsystems.com/compiler/paper/Aegon-Compiler-Algebra.pdf" target="_blank" rel="noopener">Paper</a>
+  </div>
 </div>
       </div>
 
@@ -750,12 +754,15 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
         <p>
           A semantic classification engine that maps operational systems into a finite
           failure-state ontology, eliminating metric ambiguity.
+          Prevents entire classes of system failure by enforcing invariant system states before execution.
         </p>
+        <p style="color:var(--accent2); font-weight:500;">
+  Prevents entire classes of system failure through invariant state enforcement.
+</p>
         <div class="links">
-  <a href="https://aegon-core.onrender.com//" target="_blank" rel="noopener">Application</a>
+  <a href="https://aegon-core.onrender.com/" target="_blank" rel="noopener">Application</a>
   <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank" rel="noopener">Paper</a>
-  <a href="https://docs.aegon.aadsystems.com/" target="_blank" rel="noopener">Documentation</a>
-</div>
+  <a href="https://aegon-core.onrender.com/static/documentation.html" target="_blank" rel="noopener">Documentation</a>
       </div>
 
       <div class="card">
@@ -766,7 +773,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
         </p>
         <div class="links">
           <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank" rel="noopener">Paper</a>
-          <a href="https://docs.aegon.aadsystems.com/compiler/docs/">Documentation</a>
+          <a href="https://aegon-core.onrender.com/static/documentation.html" target="_blank" rel="noopener">Documentation</a>
         </div>
       </div>
 
@@ -778,30 +785,15 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
         </p>
       </div>
 <div class="card">
-  <h4>VERIX Core</h4>
+  <h4>VERIX Core <span class="badge">Upcoming</span></h4>
   <p>
     A deterministic logic verification engine that evaluates formally
     encoded rule systems and infrastructure logic using canonical
     Gödel-numbered representations.
   </p>
   <div class="links">
-    <a href="https://verix.aadsystems.com/">Application</a>
-    <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
-    <a href="https://docs.verix.aadsystems.com/">Documentation</a>
+  <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
 </div>
-</div>
-
-<div class="card">
-  <h4>VERIX Compiler</h4>
-  <p>
-    A verification compiler that transforms rule systems into canonical
-    logical artifacts suitable for deterministic verification within
-    the VERIX Core engine.
-  </p>
-  <div class="links">
-    <a href="https://aadsystems.com/papers/godel_runtime_paper.pdf">Paper</a>
-    <a href="https://docs.verix.aadsystems.com/compiler/">Documentation</a>
-  </div>
 </div>
       <div class="card">
         <h4>CMOS Silicon Compiler <span class="badge">Upcoming</span></h4>
