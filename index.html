@@ -371,6 +371,43 @@ html {
 @keyframes blink{
   to { visibility: hidden; }
 }
+.arch-strip{
+  margin: 30px auto 10px auto;
+  max-width: 900px;
+  padding: 14px 18px;
+
+  border:1px solid var(--line);
+  border-radius:10px;
+
+  background: rgba(255,255,255,0.03);
+
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:12px;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size:0.85rem;
+}
+
+.arch-node{
+  padding:6px 10px;
+  border-radius:6px;
+  background:rgba(255,255,255,0.04);
+  border:1px solid var(--line);
+  white-space:nowrap;
+}
+
+.arch-arrow{
+  opacity:0.6;
+}
+
+.arch-highlight{
+  color:var(--accent2);
+  font-weight:600;
+}
+
+
   </style>
 </head>
 
@@ -416,6 +453,25 @@ for verification, infrastructure, and structural analysis.
   </div>
 
 </header>
+
+<div class="arch-strip">
+
+  <div class="arch-node">Gödel Encoding</div>
+  <div class="arch-arrow">→</div>
+
+  <div class="arch-node">Lie Algebra</div>
+  <div class="arch-arrow">→</div>
+
+  <div class="arch-node arch-highlight">AEGON</div>
+  <div class="arch-arrow">→</div>
+
+  <div class="arch-node">VERIX</div>
+  <div class="arch-arrow">→</div>
+
+  <div class="arch-node">Compilers</div>
+
+</div>
+
 <main>
 
 
@@ -744,7 +800,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     with implementation forthcoming.
   </p>
   <div class="links">
-    <a href="https://docs.aegon.aadsystems.com/compiler/paper/Aegon-Compiler-Algebra.pdf" target="_blank" rel="noopener">Paper</a>
+    <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank" rel="noopener">Paper</a>
   </div>
 </div>
       </div>
@@ -763,17 +819,6 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
   <a href="https://aegon-core.onrender.com/" target="_blank" rel="noopener">Application</a>
   <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank" rel="noopener">Paper</a>
   <a href="https://aegon-core.onrender.com/static/documentation.html" target="_blank" rel="noopener">Documentation</a>
-      </div>
-
-      <div class="card">
-        <h4>AEGON Policy Compiler</h4>
-        <p>
-          A deterministic compiler that transforms failure semantics into canonical,
-          non-executing policy artifacts suitable for governance and automation.
-        </p>
-        <div class="links">
-          <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank" rel="noopener">Paper</a>
-        </div>
       </div>
 
       <div class="card">
@@ -804,6 +849,58 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 
     </div>
   </section>
+
+<section class="section" id="flagship-systems">
+  <h3>Flagship Systems</h3>
+
+  <p>
+    Core operational systems implementing invariant semantics at execution level.
+  </p>
+
+  <div class="grid">
+
+    <!-- AEGON CORE (FLAGSHIP) -->
+    <div class="card" style="border:1px solid rgba(176,255,207,0.35);">
+      <h4>AEGON Core <span class="badge">Flagship System</span></h4>
+      <p>
+        A semantic classification engine that maps operational systems into a finite
+        failure-state ontology, eliminating metric ambiguity and enforcing invariant system states before execution.
+      </p>
+      <p style="color:var(--accent2); font-weight:500;">
+        Prevents entire classes of system failure through invariant state enforcement.
+      </p>
+      <div class="links">
+        <a href="https://aegon-core.onrender.com/" target="_blank">Application</a>
+        <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank">Paper</a>
+      </div>
+    </div>
+
+    <!-- AEGON POLICY COMPILER -->
+    <div class="card">
+      <h4>AEGON Policy Compiler <span class="badge">Specification</span></h4>
+      <p>
+        A deterministic compiler that maps failure semantics into canonical policy algebra,
+        producing non-executing policy artifacts for governance and automated systems.
+      </p>
+      <div class="links">
+        <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
+      </div>
+    </div>
+
+    <!-- VERIX CORE -->
+    <div class="card">
+      <h4>VERIX Core <span class="badge">Verification Engine</span></h4>
+      <p>
+        A deterministic logic verification engine evaluating formally encoded rule systems
+        using canonical Gödel-numbered representations.
+      </p>
+      <div class="links">
+        <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
+      </div>
+    </div>
+
+  </div>
+</section>
 
 <!-- MATHEMATICAL RESEARCH INTRO -->
 <section class="section" id="research">
@@ -851,9 +948,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
       </h4>
 
       <p>
-        Establishes event horizons as cohomological obstructions to global invariant structure.
-        Shows that black holes correspond to nontrivial classes in H¹(M, 𝒢),
-        preventing global semantic descent.
+        Shows that black holes correspond to nontrivial first cohomology classes on M, preventing global semantic descent.
       </p>
 
       <div class="links">
@@ -870,18 +965,21 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 
    <!-- ALGEBRAIC GEOMETRY & LIE THEORY -->
   <section class="section">
-    <h3>Algebraic Geometry & Continuous Symmetry</h3>
+    <h3>Continuous Symmetry & Structural Invariance</h3>
 
     <p>
-      AAD Systems develops structural results in Lie theory and algebraic geometry,
-      focusing on symmetry, invariance, and renormalization structures arising from
-      continuous transformation groups.
+      <p>
+This work establishes the structural origin of invariance in continuous systems.
+Where Gödel encoding governs discrete logical structure, Lie algebras arise
+inevitably from continuous symmetry, providing the algebraic backbone for
+physical and geometric invariants.  
+</p>
     </p>
 
     <div class="card paper" style="margin-top: 18px;">
 <h4>
 The Inevitability of Lie Algebras from Continuous Symmetry
-        <span class="badge">Algebraic Geometry</span>
+        <span class="badge">Continuous Invariance</span>
       </h4>
 
       <p>
@@ -889,6 +987,10 @@ The Inevitability of Lie Algebras from Continuous Symmetry
         from continuous symmetry principles and explores a renormalization-group
         analogue within categorical and geometric frameworks.
       </p>
+
+      <p style="color:var(--accent2); font-weight:500;">
+Forms the continuous counterpart to Gödel-based discrete invariance systems.
+</p>
 
       <div class="links">
   <a href="https://aadsystems.com/papers/Inevitability_of_Lie_Algebras_from_Continuous_Symmetry_and_Its_Renormalization_Group_Analogue.pdf"
@@ -966,42 +1068,53 @@ The Inevitability of Lie Algebras from Continuous Symmetry
      <!-- SELECTED RELATIVITY PAPERS -->
     <div style="margin-top: 36px;" id="papers">
       <h3 style="margin-top: 36px;">
-  Selected Relativity Papers
+  Systems Derived from Invariance Theory
 </h3>
 
       <p style="color: var(--muted); max-width: 760px; margin-bottom: 28px;">
         Two foundational papers presenting relativity as a structural theory of invariant meaning.  These works formalize observational equivalence, regime structure, and semantic invariance as the organizing principles of physical interpretation.
       </p>
 
-           <div class="grid">
-
-        <div class="card paper">
-  <h4>Semantic Relativity — A Completion of Special Relativity</h4>
-  <p>
-    A structural completion of Special Relativity showing that
-    observational outcomes form equivalence classes under Lorentz
-    transformation, and only invariant quantities descend to regime-level meaning.
-  </p>
-  <div class="links">
-    <a href="http://aadsystems.com/papers/Semantic_Relativity__A_Completion_of_Special_Relativity.pdf"
-       target="_blank" rel="noopener">Paper (PDF)</a>
+  <!-- AEGON POLICY COMPILER -->
+  <div class="card">
+    <h4>AEGON Policy Compiler <span class="badge">Specification</span></h4>
+    <p>
+      A deterministic compiler that maps failure semantics into canonical policy algebra,
+      producing non-executing policy artifacts for governance and automated systems.
+    </p>
+    <div class="links">
+      <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
+    </div>
   </div>
-</div>
 
-        <div class="card paper">
-  <h4>The Relativity Principle (Regime Formulation)</h4>
-  <p>
-    A general structural formulation of relativity as a constraint on meaning:
-    a quantity possesses observer-independent meaning if and only if it
-    descends to an invariant under admissible transformations.
-  </p>
-  <div class="links">
-    <a href="http://aadsystems.com/papers/The_Relativity_Principle__Regime_Formulation___Invariance__Meaning__and_Regime_Structure.pdf"
-       target="_blank" rel="noopener">Paper (PDF)</a>
+  <!-- VERIX CORE -->
+  <div class="card">
+    <h4>VERIX Core <span class="badge">Verification Engine</span></h4>
+    <p>
+      A deterministic logic verification engine evaluating formally encoded rule systems
+      using canonical Gödel-numbered representations.
+    </p>
+    <div class="links">
+      <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
+    </div>
   </div>
-</div>
 
-</div>
+  <!-- FUTURE SYSTEMS -->
+  <div class="card">
+    <h4>Transformer Simulator <span class="badge">Development</span></h4>
+    <p>
+      An instruction-level transformer / LLM simulator exposing attention,
+      embeddings, and MLP structure for research and education.
+    </p>
+  </div>
+
+  <div class="card">
+    <h4>CMOS Silicon Compiler <span class="badge">Research</span></h4>
+    <p>
+      A compiler-level exploration of silicon, logic, and hardware semantics,
+      bridging software abstractions and physical computation.
+    </p>
+  </div>
 
 </div>
 
