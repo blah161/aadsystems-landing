@@ -2,125 +2,169 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8">
-<title>Semantic Field Theory — AAD Systems</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Semantic Field Theory — AAD Systems™</title>
 
 <style>
-body{
-  font-family: Georgia, "Times New Roman", serif;
-  max-width: 800px;
-  margin: 60px auto;
-  padding: 0 20px;
-  line-height: 1.6;
-  color: #111;
-}
+  body{
+    margin:0;
+    background:#ffffff;
+    color:#111;
+    font-family: Georgia, "Times New Roman", serif;
+  }
 
-h1{
-  font-size: 1.8rem;
-  margin-bottom: 4px;
-}
+  .paper{
+    max-width: 760px;
+    margin: 60px auto;
+    padding: 0 24px;
+    line-height: 1.6;
+  }
 
-h2{
-  font-size: 1.2rem;
-  margin-top: 28px;
-}
+  h1{
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+    font-weight: normal;
+  }
 
-.meta{
-  color:#555;
-  margin-bottom:20px;
-}
+  .subtitle{
+    font-size: 1.2rem;
+    margin-bottom: 10px;
+  }
 
-.section{
-  margin-top: 24px;
-}
+  .author{
+    margin-bottom: 30px;
+    font-size: 0.95rem;
+  }
 
-.math{
-  background:#f5f5f5;
-  padding:10px;
-  border-radius:6px;
-  margin:10px 0;
-}
+  h2{
+    font-size: 1.2rem;
+    margin-top: 28px;
+    margin-bottom: 8px;
+    font-weight: bold;
+  }
+
+  p{
+    margin: 10px 0;
+  }
+
+  .abstract{
+    border-top:1px solid #000;
+    border-bottom:1px solid #000;
+    padding: 12px 0;
+    margin: 20px 0;
+  }
+
+  .abstract-title{
+    font-weight: bold;
+  }
+
+  .math{
+    font-family: "Courier New", monospace;
+    background:#f6f6f6;
+    padding:4px 6px;
+    border-radius:4px;
+  }
+
+  .center{
+    text-align:center;
+    margin: 10px 0;
+  }
+
+  .footer{
+    margin-top: 40px;
+    font-size: 0.9rem;
+    color:#555;
+  }
+
+  .section-number{
+    font-weight: bold;
+  }
+
 </style>
 </head>
 
 <body>
 
+<div class="paper">
+
 <h1>Semantic Field Theory</h1>
-<div class="meta">
-A Cohomological Field Theory of Meaning over Structured Spaces<br>
+
+<div class="subtitle">
+A Cohomological Field Theory of Meaning over Structured Spaces
+</div>
+
+<div class="author">
 AAD Systems™ · 2026
 </div>
 
-<div class="section">
-<h2>Abstract</h2>
-<p>
+<div class="abstract">
+<span class="abstract-title">Abstract.</span>
 We introduce a cohomological field theory in which meaning is modeled as a section-valued field over structured spaces. Local semantic regimes correspond to sections, while global meaning arises through descent along admissible transformations. Failures of semantic consistency are classified as cohomological obstructions, establishing a correspondence between semantics, geometry, and physical theory.
-</p>
 </div>
 
-<div class="section">
-<h2>1. Structured Semantic Spaces</h2>
+<h2><span class="section-number">1.</span> Structured Semantic Spaces</h2>
+
 <p>
-Let <b>X</b> be a structured space. A semantic system assigns local meaning:
+Let <span class="math">X</span> be a structured space. A semantic system assigns local meaning:
 </p>
 
-<div class="math">
+<div class="center math">
 F : X → 𝒞
 </div>
 
 <p>
-where <b>𝒞</b> is a category of semantic objects.
+where <span class="math">𝒞</span> is a category of semantic objects.
 </p>
-</div>
 
-<div class="section">
-<h2>2. Semantic Fields</h2>
+<h2><span class="section-number">2.</span> Semantic Fields</h2>
+
 <p>
 A semantic field is a section:
 </p>
 
-<div class="math">
+<div class="center math">
 s ∈ Γ(X, F)
 </div>
 
 <p>
 Local sections define semantic regimes.
 </p>
-</div>
 
-<div class="section">
-<h2>3. Descent and Global Meaning</h2>
+<h2><span class="section-number">3.</span> Descent and Global Meaning</h2>
 
-<div class="math">
-s_i |_{U_i ∩ U_j} = s_j |_{U_i ∩ U_j}
+<div class="center math">
+sᵢ |<sub>Uᵢ ∩ Uⱼ</sub> = sⱼ |<sub>Uᵢ ∩ Uⱼ</sub>
 </div>
 
 <p>
 Meaning exists when local sections glue consistently.
 </p>
-</div>
 
-<div class="section">
-<h2>4. Cohomological Obstructions</h2>
+<h2><span class="section-number">4.</span> Cohomological Obstructions</h2>
 
-<div class="math">
+<div class="center math">
 [ω] ∈ H¹(X, F)
 </div>
 
 <p>
 Nontrivial classes represent semantic inconsistency.
 </p>
-</div>
 
-<div class="section">
-<h2>5. Correspondence Principle</h2>
+<h2><span class="section-number">5.</span> Correspondence Principle</h2>
 
-<div class="math">
+<p class="center">
 Semantics ↔ Geometry ↔ Physical Theory
-</div>
+</p>
 
 <p>
 Meaning is invariance under admissible transformations.
 </p>
+
+<div class="footer">
+This document defines the foundational framework underlying subsequent research in semantic systems, cohomology, and invariant computational structures.
+</div>
+
 </div>
 
 </body>
