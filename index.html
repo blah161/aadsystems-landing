@@ -414,11 +414,89 @@ html {
   font-weight: 600;
   text-shadow: 0 0 10px rgba(176,255,207,0.8);
 }
+#floating-nav {
+  position: fixed;
+  top: 110px;
+  right: 26px;
+  width: 200px;
+
+  background: rgba(10, 15, 35, 0.92);
+  border: 1px solid var(--line);
+  border-radius: 10px;
+
+  padding: 14px 14px;
+  font-size: 0.85rem;
+
+  backdrop-filter: blur(6px);
+
+  box-shadow:
+    0 0 20px rgba(138,180,255,0.15),
+    0 8px 28px rgba(0,0,0,0.6);
+
+  z-index: 1000;
+}
+
+#floating-nav h3 {
+  margin: 0 0 10px 0;
+  font-size: 0.7rem;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+#floating-nav a {
+  display: block;
+  padding: 5px 0;
+  color: var(--muted);
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+#floating-nav a:hover {
+  color: var(--accent);
+  text-shadow: 0 0 6px rgba(138,180,255,0.5);
+}
+
+#floating-nav .divider {
+  margin: 10px 0;
+  border-top: 1px solid var(--line);
+}
+
+/* Active highlight */
+#floating-nav a.active {
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+/* Hide on smaller screens */
+@media (max-width: 1200px) {
+  #floating-nav {
+    display: none;
+  }
+}
+
   </style>
 </head>
 
 
 <body>
+  <nav id="floating-nav">
+  <h3>Navigate</h3>
+
+  <a href="#systems-lab">Lab</a>
+  <a href="#research-program">Research</a>
+  <a href="#systems">Systems</a>
+  <a href="#flagship-systems">Flagship</a>
+  <a href="#sft-layer">Foundations</a>
+  <a href="#cohomology-layer">Cohomology</a>
+  <a href="#srrc-layer">SRRC</a>
+  <a href="#papers">Papers</a>
+
+  <div class="divider"></div>
+
+  <a href="#system-status">Status</a>
+</nav>
+
 
 <div class="instrument-bar">
 
@@ -1084,7 +1162,7 @@ obstructing global invariant structure.<br>
 These are not singularities of spacetime structure, but boundaries of semantic coherence—regions in which global invariant meaning fails to exist.
 </p>
 <p style="color:var(--accent2); font-weight:500;">
-Within this framework, black holes mark the boundary of global semantic descent, where invariant structure cannot be extended across observational frames and epistemic reconstruction fails.
+Within this framework, black holes mark the boundary of global semantic descent, where invariant structure cannot be extended across observational frames and meaning cannot be consistently reconstructed.
 </p>
 <p style="color:var(--muted); max-width:720px;">
 Within SRRC, this obstruction appears as the failure of invariant computation, where no transformation sequence yields a globally consistent output across frames.
@@ -1508,6 +1586,33 @@ if(label2){
 
 updatePaperCount();
 
+</script>
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const sections = document.querySelectorAll("section[id]");
+  const links = document.querySelectorAll("#floating-nav a");
+
+  function updateNav() {
+    let current = "";
+
+    sections.forEach(section => {
+      const rect = section.getBoundingClientRect();
+      if (rect.top <= 120 && rect.bottom >= 120) {
+        current = section.id;
+      }
+    });
+
+    links.forEach(link => {
+      link.classList.remove("active");
+      if (link.getAttribute("href") === "#" + current) {
+        link.classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateNav);
+  updateNav();
+});
 </script>
 
   </body>
