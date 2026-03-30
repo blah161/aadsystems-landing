@@ -406,8 +406,14 @@ html {
   color:var(--accent2);
   font-weight:600;
 }
-
-
+.stack-nav a:hover{
+  text-shadow: 0 0 8px rgba(176,255,207,0.6);
+}
+.stack-nav a.active{
+  color: var(--accent2);
+  font-weight: 600;
+  text-shadow: 0 0 10px rgba(176,255,207,0.8);
+}
   </style>
 </head>
 
@@ -460,6 +466,35 @@ for verification, infrastructure, and structural analysis.
 ">
 Semantic Field Theory is the foundational framework of this lab, formalizing meaning as a cohomological field theory over structured spaces and grounding all systems and research developed below.
 
+</div>
+<div class="stack-nav" style="
+  margin-top:18px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size:0.9rem;
+  max-width:720px;
+  line-height:1.6;
+">
+  <a href="#sft-layer" style="color:var(--accent2); text-decoration:none;">
+    Semantic Field Theory → invariant structure
+  </a><br>
+
+  <a href="#cohomology-layer" style="color:var(--accent); text-decoration:none;">
+    Cohomology → obstruction
+  </a><br>
+
+  <a href="#srrc-layer" style="color:var(--accent2); text-decoration:none;">
+    SRRC / AEGON / VERIX → executable invariance
+  </a>
+</div>
+
+<div style="
+  margin-top:8px;
+  color:var(--faint);
+  font-size:0.85rem;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  letter-spacing:0.05em;
+">
+  Foundation → Obstruction → Execution
 </div>
 
 </header>
@@ -579,7 +614,7 @@ Semantic Field Theory is the foundational framework of this lab, formalizing mea
   font-weight:500;
   max-width:760px;
 ">
-This framework models semantic consistency through descent and cohomological obstruction.
+Semantic consistency is governed by descent and cohomological obstruction.
 </p>
 
 <p>
@@ -940,12 +975,10 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     Original research in symmetry, invariance, relativity, and algebraic structure.
   </p>
 </section>
-<section class="section">
-
+<section class="section" id="sft-layer">
 <h3>Flagship Research — Foundational Results</h3>
-
 <p style="max-width:760px;">
-All papers below are developed within the Semantic Field Theory framework and represent realizations, extensions, or applications of its core structure.
+All papers below are developed within the Semantic Field Theory framework and represent formal realizations, extensions, or applications of its invariant structure.
 </p>
   <p style="max-width:760px;">
     Foundational papers defining the core architecture of deterministic computation,
@@ -960,20 +993,23 @@ All papers below are developed within the Semantic Field Theory framework and re
 ">
   <h4>
     Semantic Field Theory — Foundational Statement
-    <span class="badge">FOUNDATIONAL· Geometry · Cohomology · Field Theory</span>
+    <span class="badge">FOUNDATIONAL · Geometry · Cohomology · Field Theory</span>
   </h4>
 
   <p>
-A foundational cohomological field theory of meaning defined over structured spaces.
+A foundational cohomological field theory of meaning defined over structured spaces, establishing the invariant semantic framework underlying all systems developed in this lab.
 </p>
 
 <p>
-Establishes the global framework in which semantic systems are modeled as fields,
-with consistency governed by descent and cohomological obstruction.
+Establishes the global framework in which semantic systems are realized as fields over structured spaces,
+with consistency governed by semantic descent and cohomological obstruction.
 </p>
 
 <p style="color:var(--accent2); font-weight:500;">
 All subsequent research papers are realizations or extensions of this theory.
+</p>
+<p style="color:var(--muted); max-width:720px;">
+All systems and compilers presented in this lab are executable realizations of invariant structure under transformation.
 </p>
 
  <div class="links">
@@ -994,11 +1030,11 @@ All subsequent research papers are realizations or extensions of this theory.
   </h4>
 
   <p>
-    String-theoretic formulation of semantic cohomology via worldsheets and gauge fields.
+A string-theoretic formulation of semantic cohomology defined through transformation structure on worldsheets and gauge fields.
   </p>
 
   <p>
-    Models semantic regimes as extended objects with transition functions encoded along worldsheets.<br>
+    Models semantic regimes as extended objects whose transformation structure is encoded along worldsheets.<br>
     Identifies topological obstructions to meaning as cohomological defects in the global structure.
   </p>
 
@@ -1008,8 +1044,9 @@ All subsequent research papers are realizations or extensions of this theory.
        Read Paper
     </a>
 </div>
+</div>
 
-    <!-- GOEDEL PAPER -->
+    <!-- GODEL PAPER -->
     <div class="card paper" style="border:1px solid rgba(138,180,255,0.35);">
       <h4>
         Executable Gödel Encodings
@@ -1017,7 +1054,7 @@ All subsequent research papers are realizations or extensions of this theory.
       </h4>
 
       <p>
-        Introduces a deterministic encoding of logical systems into executable structures
+        Introduces a deterministic transformation of logical systems into executable invariant structures
         via Gödel numbering. Establishes the foundation for VERIX and formal semantic execution.
       </p>
 
@@ -1030,21 +1067,28 @@ All subsequent research papers are realizations or extensions of this theory.
     </div>
 
     <!-- COHOMOLOGY PAPER -->
-    <div class="card paper" style="border:1px solid rgba(176,255,207,0.35);">
+    <div id="cohomology-layer" class="card paper" style="border:1px solid rgba(176,255,207,0.35);">
       <h4>
-        Cohomological Obstructions to Global Semantic Descent
-        <span class="badge">Geometry · Cohomology · Obstruction</span>
-      </h4>
+  Cohomological Obstructions to Global Semantic Descent
+  <span class="badge">Geometry · Cohomology · Black Holes</span>
+</h4>
 
-      <p>
-Cohomological model of semantic descent as a local-to-global obstruction problem in spacetime.
+<p>
+A cohomological formulation of semantic descent as a local-to-global obstruction problem in spacetime,
+with direct physical interpretation in relativistic systems.
 </p>
 
 <p>
-Identifies event horizons as nontrivial first cohomology classes preventing global invariant structure.<br>
-Establishes a correspondence between geometry, gauge theory, and the failure of semantic globalization.
+Identifies event horizons and black holes as nontrivial cohomology classes
+obstructing global invariant structure.<br>
+These are not singularities of spacetime structure, but boundaries of semantic coherence—regions in which global invariant meaning fails to exist.
 </p>
-
+<p style="color:var(--accent2); font-weight:500;">
+Within this framework, black holes mark the boundary of global semantic descent, where invariant structure cannot be extended across observational frames and epistemic reconstruction fails.
+</p>
+<p style="color:var(--muted); max-width:720px;">
+Within SRRC, this obstruction appears as the failure of invariant computation, where no transformation sequence yields a globally consistent output across frames.
+</p>
       <div class="links">
         <a href="https://aadsystems.com/papers/Cohomological_Obstructions_to_Global_Semantic_Descent.pdf"
            target="_blank" rel="noopener">
@@ -1063,8 +1107,8 @@ Establishes a correspondence between geometry, gauge theory, and the failure of 
   </p>
 
   <p>
-    Extends semantic regimes from sheaves to stacks, capturing higher-order compatibility and descent.<br>
-    Introduces higher cohomological obstructions governing semantic consistency across overlapping regimes.
+    Extends semantic regimes from sheaves to stacks, capturing higher-order compatibility and semantic descent.<br>
+    Introduces higher cohomological obstructions governing global invariant structure across overlapping regimes.
   </p>
 
   <div class="links">
@@ -1119,22 +1163,37 @@ Forms the continuous counterpart to Gödel-based discrete invariance systems.
   </section>
 
   <!-- SRRC ANNOUNCEMENT -->
-  <section class="section">
-    <h3>New Paper Release · 2026</h3>
+  <section class="section" id="srrc-layer">
+  <h3>New Paper Release · 2026</h3>
 
     <div class="card paper" style="margin-top: 18px;">
 <h4>Special Relativity Regime Compiler (SRRC)</h4>
       <p>
-        A reduced instruction set formulation of relativistic invariants.
-        This work isolates the invariant algebra of Special Relativity by
-        factoring observational space under Lorentz action and expressing
-        invariant content through categorical projection.
-      </p>
+  A reduced instruction set formulation of relativistic invariance,
+  in which invariant physical quantities are computed as the output of a finite transformation system.
+  This work isolates the invariant algebra of Special Relativity by
+  factoring observational space under Lorentz action and expressing
+  invariant structure through categorical projection.
+</p>
+
+<p style="color:var(--accent2); font-weight:500;">
+  SRRC expresses relativistic physics as an executable transformation system,
+  establishing a compiler-level formulation of physical law.
+</p>
+<p style="color:var(--muted); max-width:720px;">
+  Within the AAD Systems stack, SRRC serves as the physical-layer compiler,
+realizing invariant computation downstream of Semantic Field Theory (structure)
+and cohomological obstruction (failure modes), alongside AEGON (system invariance)
+and VERIX (logical invariance).
+</p>
 
       <p>
         The invariant kernel reduces to the Minkowski quadratic form in the
         single-event case and to Gram matrix generators in the multi-event regime.
       </p>
+      <p style="color:var(--accent2); font-weight:500;">
+Relativistic physics is expressed as an executable transformation system whose outputs are invariant under observer change.
+</p>
 
       <div class="links">
         <a href="https://aadsystems.com/papers/Special_Relativity_Regime_Compiler__SRRC_.pdf"
@@ -1144,6 +1203,117 @@ Forms the continuous counterpart to Gödel-based discrete invariance systems.
       </div>
     </div>
   </section>
+<!-- EXECUTABLE RESEARCH SYSTEMS -->
+<section class="section" id="executable-research">
+
+  <h3>Executable Research Systems</h3>
+
+  <p style="color:var(--accent2); font-weight:500;">
+    From obstruction to execution — a unified system of invariant computation.
+  </p>
+
+  <p style="max-width:760px;">
+    These papers form a unified research system in which physical and mathematical
+    structures are expressed as constraint-driven transformations.
+
+    Across gauge theory, quantum field theory, and relativity, local data is governed
+    by transition relations whose global consistency is determined by the presence
+    or absence of obstruction.
+
+    These structures are not only theoretical, but executable—forming the basis
+    for deterministic compilers and verification systems developed in this lab.
+  </p>
+
+  <div class="grid" style="margin-top:18px;">
+
+    <!-- GAUGE / COHOMOLOGY -->
+    <div class="card paper">
+      <h4>
+        Gauge Theory as Cohomological Obstruction
+        <span class="badge">FOUNDATION · Cohomology · Gauge</span>
+      </h4>
+
+      <p>
+        A structural formulation of gauge theory as a local-to-global consistency problem,
+        identifying cohomological obstruction as the mechanism governing admissibility.
+      </p>
+
+      <p style="color:var(--accent2); font-weight:500;">
+        Defines obstruction as the condition for global consistency.
+      </p>
+
+      <div class="links">
+        <a href="https://aadsystems.com/papers/gauge_obstruction.pdf" target="_blank">Read Paper</a>
+      </div>
+    </div>
+
+    <!-- QFT -->
+    <div class="card paper">
+      <h4>
+        Quantum Field Theory as an Invariant Compiler
+        <span class="badge">QFT · Symmetry · Invariance</span>
+      </h4>
+
+      <p>
+        Reformulates QFT as a constraint-driven system where local field data
+        produces invariant observables under symmetry and dynamics.
+      </p>
+
+      <p style="color:var(--accent2); font-weight:500;">
+        Physical meaning emerges as invariant structure.
+      </p>
+
+      <div class="links">
+        <a href="https://aadsystems.com/papers/qft_invariant_compiler.pdf" target="_blank">Read Paper</a>
+      </div>
+    </div>
+
+    <!-- EINSTEIN EQUATIONS -->
+    <div class="card paper">
+      <h4>
+        Einstein Equations as Global Constraint Laws
+        <span class="badge">Relativity · Geometry</span>
+      </h4>
+
+      <p>
+        Interprets curvature as a global consistency condition arising from
+        local geometric structure.
+      </p>
+
+      <p style="color:var(--accent2); font-weight:500;">
+        Curvature encodes global admissibility.
+      </p>
+
+      <div class="links">
+        <a href="https://aadsystems.com/papers/einstein_equations.pdf" target="_blank">Read Paper</a>
+      </div>
+    </div>
+
+    <!-- GEOMETRY COMPILER -->
+    <div class="card paper" style="border:1px solid rgba(176,255,207,0.35);">
+      <h4>
+        Einstein Geometry Compiler
+        <span class="badge">COMPILER · Execution</span>
+      </h4>
+
+      <p>
+        A compiler-level system translating geometric theory into executable
+        constraint evaluation under curvature.
+      </p>
+
+      <p style="color:var(--accent2); font-weight:500;">
+        Transforms geometry into deterministic execution.
+      </p>
+
+      <div class="links">
+        <a href="https://aadsystems.com/papers/einstein_geometry_compiler.pdf" target="_blank">Read Paper</a>
+      </div>
+    </div>
+
+  </div>
+
+</section>
+  
 <!-- FORMAL LOGIC & COMPUTATION -->
 <section class="section">
   <h3>Formal Logic & Computation</h3>
@@ -1178,7 +1348,7 @@ Forms the continuous counterpart to Gödel-based discrete invariance systems.
     <p>
   AAD Systems develops original physical theory centered on relativity,
   observation, and regime structure. These works treat physical theories
-  as syntactic presentations whose invariant semantic content emerges
+  as syntactic presentations whose invariant structure emerges
   under observer transformation, rather than from metric form alone.
 </p>
      <!-- SELECTED RELATIVITY PAPERS -->
@@ -1266,6 +1436,40 @@ var sc_project=13145601;
 var sc_invisible=1; 
 var sc_security="716b4ba2"; 
 </script>
+
+<script>
+document.addEventListener("DOMContentLoaded", function(){
+
+  const sections = [
+    { id: "sft-layer", link: 0 },
+    { id: "cohomology-layer", link: 1 },
+    { id: "srrc-layer", link: 2 }
+  ];
+
+  const navLinks = document.querySelectorAll(".stack-nav a");
+
+  function updateActiveLayer(){
+    let scrollPos = window.scrollY + window.innerHeight * 0.3;
+
+    for (let i = sections.length - 1; i >= 0; i--) {
+  const section = sections[i];
+      const el = document.getElementById(section.id);
+      if(!el) return;
+
+      if(scrollPos >= el.offsetTop){
+        navLinks.forEach(link => link.classList.remove("active"));
+        navLinks[section.link].classList.add("active");
+      }
+    });
+  }
+
+  window.addEventListener("scroll", updateActiveLayer);
+  updateActiveLayer();
+
+});
+</script>
+
+
 <script type="text/javascript"
 src="https://www.statcounter.com/counter/counter.js"
 async></script>
