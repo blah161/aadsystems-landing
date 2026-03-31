@@ -479,17 +479,31 @@ html {
 </head>
 
 
-<body>
-  <nav id="floating-nav">
+<body id="top">
+
+<!-- FLOATING NAV (unchanged) -->
+<nav id="floating-nav">
   <h3>Navigate</h3>
+
+  <a href="#top">Top</a>
+
+  <div class="divider"></div>
+
+  <a href="#why-invariant-systems">Why</a>
+  <a href="#who-this-is-for">Applications</a>
+
+  <a href="#infrastructure">Infrastructure</a>
+  <a href="#finance">Finance & Trading</a>
+
+  <div class="divider"></div>
+
+  <a href="#systems">Systems</a>
+  <a href="#flagship-systems">Flagship</a>
+
+  <div class="divider"></div>
 
   <a href="#systems-lab">Lab</a>
   <a href="#research-program">Research</a>
-  <a href="#systems">Systems</a>
-  <a href="#flagship-systems">Flagship</a>
-  <a href="#sft-layer">Foundations</a>
-  <a href="#cohomology-layer">Cohomology</a>
-  <a href="#srrc-layer">SRRC</a>
   <a href="#papers">Papers</a>
 
   <div class="divider"></div>
@@ -497,7 +511,7 @@ html {
   <a href="#system-status">Status</a>
 </nav>
 
-
+<!-- TOP BAR (FIXED) -->
 <div class="instrument-bar">
 
   <div class="instrument-left">
@@ -505,81 +519,87 @@ html {
   </div>
 
   <div class="instrument-center">
-  <span id="lab-clock"></span> | Build v1.0
+    <span id="lab-clock"></span> | Build v1.0
+  </div>
+
+  <div class="instrument-nav">
+    <a href="#research-program">Research</a>
+    <a href="#systems">Systems</a>
+    <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
+    <a href="#papers">Papers</a>
+    <a href="https://aadsystems.com" target="_blank">AAD Systems</a>
+  </div>
+
 </div>
 
- <div class="instrument-nav">
-  <a href="#research">Research</a>
-  <a href="#systems">Systems</a>
-  <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
-  <a href="#papers">Papers</a>
-  <a href="https://aadsystems.com" target="_blank">AAD Systems</a>
-</div>
-</div>
-
+<!-- HEADER (CLEAN + SINGLE SOURCE OF TRUTH) -->
 <header>
+
   <h1>AAD Systems™</h1>
 
   <h2>
-Deterministic compilers and formal computational systems
-for verification, infrastructure, and structural analysis.
+    Deterministic compilers and formal computational systems
+    for verification, infrastructure, and structural analysis.
   </h2>
 
   <div style="
-  margin-top:18px;
-  font-size:1.05rem;
-  font-weight:500;
-  color:var(--accent2);
-  letter-spacing:0.04em;
-  max-width:720px;
-">
-  Meaning is invariance under admissible transformations.
-</div>
+    margin-top:18px;
+    font-size:1.05rem;
+    font-weight:500;
+    color:var(--accent2);
+    letter-spacing:0.04em;
+    max-width:720px;
+  ">
+    Deterministic systems for infrastructure and financial environments where failure is not acceptable.
+  </div>
 
-<div style="
-  margin-top:10px;
-  font-size:0.95rem;
-  color:var(--muted);
-  max-width:720px;
-">
-Semantic Field Theory is the foundational framework of this lab, formalizing meaning as a cohomological field theory over structured spaces and grounding all systems and research developed below.
+  <div style="
+    margin-top:10px;
+    font-size:0.95rem;
+    color:var(--muted);
+    max-width:720px;
+  ">
+    AEGON and VERIX enforce structural correctness in live systems—eliminating ambiguity,
+    preventing cascading failures, and ensuring consistent execution across environments.
+  </div>
 
-</div>
-<div class="stack-nav" style="
-  margin-top:18px;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  font-size:0.9rem;
-  max-width:720px;
-  line-height:1.6;
-">
-  <a href="#sft-layer" style="color:var(--accent2); text-decoration:none;">
-    Semantic Field Theory → invariant structure
-  </a><br>
+  <div class="stack-nav" style="
+    margin-top:18px;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    font-size:0.9rem;
+    max-width:720px;
+    line-height:1.6;
+  ">
+    <a href="#sft-layer" style="color:var(--accent2); text-decoration:none;">
+      Invariant Theory → Structure
+    </a><br>
 
-  <a href="#cohomology-layer" style="color:var(--accent); text-decoration:none;">
-    Cohomology → obstruction
-  </a><br>
+    <a href="#cohomology-layer" style="color:var(--accent); text-decoration:none;">
+      Obstruction → consistency limits
+    </a><br>
 
-  <a href="#srrc-layer" style="color:var(--accent2); text-decoration:none;">
-    SRRC / AEGON / VERIX → executable invariance
-  </a>
-</div>
+    <a href="#srrc-layer" style="color:var(--accent2); text-decoration:none;">
+      SRRC / AEGON / VERIX → executable invariance
+    </a>
+  </div>
 
-<div style="
-  margin-top:8px;
-  color:var(--faint);
-  font-size:0.85rem;
-  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
-  letter-spacing:0.05em;
-">
-  Foundation → Obstruction → Execution
-</div>
+  <div style="
+    margin-top:8px;
+    color:var(--faint);
+    font-size:0.85rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing:0.05em;
+  ">
+    Foundation → Obstruction → Execution
+  </div>
 
 </header>
 
+<!-- ARCH STRIP -->
 <div style="text-align:center; margin-top:20px; color:var(--faint); font-size:0.85rem;">
   Structural Pipeline — From Mathematical Invariance to Executable Systems
 </div>
+
 <div class="arch-strip">
 
   <div class="arch-node">Logical Encoding</div>
@@ -601,10 +621,91 @@ Semantic Field Theory is the foundational framework of this lab, formalizing mea
 <main>
 
 
+
+<section class="section" id="why-invariant-systems">
+
+
+
+  <h3>Why Deterministic Systems</h3>
+
+  <p style="max-width:760px;">
+    Modern systems fail not because of missing data, but because of inconsistent structure.
+    Most tools approximate, predict, or react after failure occurs.
+  </p>
+
+  <p style="
+  margin-top:18px;
+  font-size:1.05rem;
+  color:var(--accent2);
+  font-weight:500;
+  max-width:760px;
+">
+  These systems do not detect failure — they prevent entire classes of failure from occurring.
+</p>
+
+  <p style="max-width:760px;">
+    The systems developed in this lab take a different approach:
+    they enforce correctness by design, evaluating structure directly rather than relying on heuristics or probabilistic models.
+  </p>
+
+  <p style="max-width:760px;">
+    This enables:
+  </p>
+
+  <p style="max-width:760px; color:var(--muted);">
+    • deterministic evaluation of system behavior<br>
+    • elimination of entire classes of failure<br>
+    • consistent interpretation across scale and environments
+  </p>
+
+  <p style="margin-top:16px; color:var(--accent2); max-width:760px;">
+    These systems are designed for environments where correctness, stability, and interpretability are non-negotiable.
+  </p>
+
+</section>
+
+<section class="section" id="who-this-is-for">
+
+  <h3>Applications — Infrastructure & Financial Systems</h3>
+
+  <div class="grid" style="margin-top:18px;">
+
+    <div class="card" id="infrastructure">
+      <h4>Infrastructure Systems</h4>
+      <p>
+        Deterministic evaluation of system state, configuration, and failure modes.
+        Eliminates ambiguity in monitoring, classification, and operational decision-making.
+      </p>
+      <p style="color:var(--muted);">
+        Relevant to cloud infrastructure, distributed systems, and large-scale platforms.
+      </p>
+      <p style="color:var(--accent2); font-weight:500;">
+  Cloud · Distributed Systems · Platform Engineering
+</p>
+    </div>
+
+    <div class="card" id="finance">
+      <h4>Finance & Trading Systems</h4>
+      <p>
+        Deterministic evaluation of trading logic, signals, and execution rules.
+Prevents drift, inconsistency, and misinterpretation across market regimes.
+      </p>
+      <p style="color:var(--muted);">
+        Applicable to hedge funds, quantitative systems, and risk infrastructure.
+      </p>
+      <p style="color:var(--accent2); font-weight:500;">
+  Hedge Funds · Quant Systems · Execution Infrastructure
+</p>
+    </div>
+
+  </div>
+
+</section>
+
   <section class="section">
   <h3>Research Areas</h3>
   <p>
-    Compiler Systems · Semantic Infrastructure · Mathematical Physics
+    Compiler Systems · Infrastructure Systems · Mathematical Physics
   </p>
 </section>
 
@@ -657,8 +758,8 @@ Semantic Field Theory is the foundational framework of this lab, formalizing mea
   </p>
 
   <p>
-    • Deterministic Compilers<br>
-    • Operational Semantic Systems<br>
+    • Compiler Systems<br>
+    • Infrastructure Systems<br>
     • Mathematical Foundations of Invariance and Symmetry
   </p>
 </section>
@@ -692,15 +793,14 @@ Semantic Field Theory is the foundational framework of this lab, formalizing mea
   font-weight:500;
   max-width:760px;
 ">
-Semantic consistency is governed by descent and cohomological obstruction.
+System consistency is governed by admissible transformation and structural limits.
 </p>
 
 <p>
-This emerging framework models meaning as a field defined over structured spaces,
-in which local semantic assignments correspond to sections and global meaning
-arises through descent. Failures of consistency are interpreted as cohomological
-obstructions, establishing a direct correspondence between semantic structure,
-geometry, and physical theory.
+This framework models systems as structured transformations over defined spaces,
+where local operations must align to produce globally consistent results.
+Failures of consistency correspond to structural breakdowns in how those
+transformations compose.
 </p>
 
 
@@ -761,7 +861,7 @@ Work is organized into domains that produce both theoretical structures and exec
     </div>
 
     <div class="card">
-      <h4>Deterministic Semantic Infrastructure</h4>
+      <h4>Deterministic Infrastructure Systems</h4>
       <p>
         Executable systems enforcing invariant structure in operational environments. 
         Systems are deterministic, auditable, and structurally complete.
@@ -774,8 +874,18 @@ Work is organized into domains that produce both theoretical structures and exec
     <div class="card">
       <h4>Compiler Systems</h4>
       <p>
-        Domain-specific compilers enforcing invariant structure at execution level, 
-        including algebraic, logical, and physical compilers.
+  Domain-specific compilers that enforce invariant structure at execution time,
+  transforming abstract logic into deterministic, executable systems.
+</p>
+
+<p style="color:var(--muted);">
+  Replace heuristic pipelines with formally defined transformation systems
+  that guarantee consistent outcomes across environments.
+</p>
+
+<p style="color:var(--accent2); font-weight:500;">
+  Used in infrastructure, verification, and financial systems where execution correctness must be guaranteed.
+</p>
       </p>
       <div class="links">
         <a href="https://ecasm.aadsystems.com/">eCASM</a>
@@ -952,12 +1062,19 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
       <div class="card">
         <h4>AEGON Core</h4>
         <p>
-          A semantic classification engine that maps operational systems into a finite
-          failure-state ontology, eliminating metric ambiguity.
-          Prevents entire classes of system failure by enforcing invariant system states before execution.
-        </p>
-        <p style="color:var(--accent2); font-weight:500;">
-  Prevents entire classes of system failure through invariant state enforcement.
+  <p>
+  Deterministic engine that classifies live system state into a finite,
+  invariant failure ontology.
+</p>
+
+<p style="color:var(--muted);">
+  Identifies structural failure before it propagates—without heuristics,
+  metrics, or probabilistic models.
+</p>
+
+<p style="color:var(--accent2); font-weight:500;">
+  Used by infrastructure teams to eliminate ambiguity, prevent outages, and reduce operational risk at scale.
+</p>
 </p>
         <div class="links">
   <a href="https://aegon-core.onrender.com/" target="_blank" rel="noopener">Application</a>
@@ -975,9 +1092,16 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 <div class="card">
   <h4>VERIX Core <span class="badge">Upcoming</span></h4>
   <p>
-    A deterministic logic verification engine that evaluates formally
-    encoded rule systems and infrastructure logic using canonical
-    Gödel-numbered representations.
+  Deterministic verification engine for rule systems, strategies, and execution logic.
+</p>
+
+<p style="color:var(--muted);">
+  Ensures all outcomes are structurally valid and invariant under transformation.
+</p>
+
+<p style="color:var(--accent2); font-weight:500;">
+  Used in trading and financial systems to enforce correctness, eliminate drift, and prevent catastrophic execution errors.
+</p>
   </p>
   <div class="links">
   <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
@@ -1045,7 +1169,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 
   </div>
 </section>
-
+Invariant Field Theory is the foundational framework of this lab, formalizing meaning as invariant structure over structured spaces and grounding all systems and research developed below.
 <!-- MATHEMATICAL RESEARCH INTRO -->
 <section class="section" id="">
 <h3>Mathematical Research</h3>
@@ -1056,7 +1180,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 <section class="section" id="sft-layer">
 <h3>Flagship Research — Foundational Results</h3>
 <p style="max-width:760px;">
-All papers below are developed within the Semantic Field Theory framework and represent formal realizations, extensions, or applications of its invariant structure.
+All papers below are developed within the Invariant Field Theory framework and represent formal realizations, extensions, or applications of its invariant structure.
 </p>
   <p style="max-width:760px;">
     Foundational papers defining the core architecture of deterministic computation,
@@ -1064,13 +1188,13 @@ All papers below are developed within the Semantic Field Theory framework and re
   </p>
 
   <div class="grid" style="margin-top:18px;">
-    <!-- SEMANTIC FIELD THEORY -->
+    <!-- Invariant Field Theory -->
 <div class="card paper" style="
   border:1px solid rgba(255,210,140,0.55);
   box-shadow: 0 0 28px rgba(255,210,140,0.18);
 ">
   <h4>
-    Semantic Field Theory — Foundational Statement
+    Invariant Field Theory — Foundational Statement
     <span class="badge">FOUNDATIONAL · Geometry · Cohomology · Field Theory</span>
   </h4>
 
@@ -1079,8 +1203,8 @@ A foundational cohomological field theory of meaning defined over structured spa
 </p>
 
 <p>
-Establishes the global framework in which semantic systems are realized as fields over structured spaces,
-with consistency governed by semantic descent and cohomological obstruction.
+Establishes a unified framework in which systems are modeled as structured transformations over defined spaces,
+with correctness determined by consistency under transformation and well-defined system constraints.
 </p>
 
 <p style="color:var(--accent2); font-weight:500;">
@@ -1206,7 +1330,6 @@ Within SRRC, this obstruction appears as the failure of invariant computation, w
     <h3>Continuous Symmetry & Structural Invariance</h3>
 
     <p>
-      <p>
 This work establishes the structural origin of invariance in continuous systems.
 Where Gödel encoding governs discrete logical structure, Lie algebras arise
 inevitably from continuous symmetry, providing the algebraic backbone for
@@ -1260,7 +1383,7 @@ Forms the continuous counterpart to Gödel-based discrete invariance systems.
 </p>
 <p style="color:var(--muted); max-width:720px;">
   Within the AAD Systems stack, SRRC serves as the physical-layer compiler,
-realizing invariant computation downstream of Semantic Field Theory (structure)
+realizing invariant computation downstream of Invariant Field Theory (structure)
 and cohomological obstruction (failure modes), alongside AEGON (system invariance)
 and VERIX (logical invariance).
 </p>
@@ -1312,8 +1435,14 @@ Relativistic physics is expressed as an executable transformation system whose o
       </h4>
 
       <p>
-        A structural formulation of gauge theory as a local-to-global consistency problem,
-        identifying cohomological obstruction as the mechanism governing admissibility.
+Models gauge systems as constraint structures in which global consistency depends
+on the absence of structural obstruction.
+</p>
+
+<p style="color:var(--muted);">
+Identifies failure modes in physical and mathematical systems as limits of global consistency,
+providing a unified framework for detecting structural breakdown.
+</p>
       </p>
 
       <p style="color:var(--accent2); font-weight:500;">
@@ -1333,8 +1462,14 @@ Relativistic physics is expressed as an executable transformation system whose o
       </h4>
 
       <p>
-        Reformulates QFT as a constraint-driven system where local field data
-        produces invariant observables under symmetry and dynamics.
+Reframes Quantum Field Theory as a deterministic system in which physical quantities
+emerge as invariant outputs of constrained field configurations.
+</p>
+
+<p style="color:var(--muted);">
+Provides a structural interpretation of physics that replaces analytic complexity
+with invariant evaluation and constraint-driven consistency.
+</p>
       </p>
 
       <p style="color:var(--accent2); font-weight:500;">
@@ -1496,7 +1631,26 @@ Relativistic physics is expressed as an executable transformation system whose o
   </div>
 
   <div style="margin-bottom:14px;">
-    <a href="#research">Research</a>
+    </div>
+
+<section class="section" style="margin-top:28px;">
+
+  <p style="
+    font-size:1.05rem;
+    color:var(--accent2);
+    font-weight:500;
+    max-width:760px;
+  ">
+    Deterministic systems for infrastructure and financial environments where failure is not acceptable.
+  </p>
+
+  <p style="max-width:760px; color:var(--muted);">
+    AEGON and VERIX enforce structural correctness in live systems—eliminating ambiguity,
+    preventing cascading failures, and ensuring consistent execution across environments.
+  </p>
+
+</section>
+<a href="#research-program">Research</a>
     <a href="#systems">Systems</a>
     <a href="#papers">Papers</a>
     <a href="https://aadsystems.com" target="_blank">Main Site</a>
