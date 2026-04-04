@@ -886,7 +886,7 @@ header h2{
 
   <div class="grid">
 
-    <div class="card product aegon" style="background: linear-gradient(180deg, rgba(176,255,207,0.08), rgba(255,255,255,0.02));">
+  <div class="card product aegon" style="background: linear-gradient(180deg, rgba(176,255,207,0.08), rgba(255,255,255,0.02));">
   <div class="product-label">INFRASTRUCTURE</div>
 
   <h4>AEGON Core</h4>
@@ -915,7 +915,7 @@ header h2{
     Financial verification engine
   </div>
 </div>
-<div class="card product" style="border:1px solid rgba(176,255,207,0.25);">
+<div class="card product aegon" onclick="openArbModal()" style="cursor:pointer; background: linear-gradient(180deg, rgba(176,255,207,0.08), rgba(255,255,255,0.02));">
 
   <div class="product-label">FINANCIAL SYSTEMS</div>
 
@@ -925,18 +925,33 @@ header h2{
   </h4>
 
   <p>
-    Deterministic pricing engine that evaluates market structure
-    through invariant relationships across options, FX, and forward systems.
+    Deterministic evaluation of pricing structure across financial systems,
+    identifying invariant violations and admissible trade resolutions.
   </p>
 
   <p style="color:var(--muted);">
-    Eliminates ambiguity in pricing interpretation by enforcing
-    structural consistency instead of probabilistic modeling.
+    Enforces consistency across options, FX, and forward markets by evaluating
+    structural relationships rather than predicting outcomes.
+  </p>
+
+  <p style="color:var(--accent2); font-weight:500;">
+    Invariant violations yield executable arbitrage constructions.
   </p>
 
   <div class="product-tag">
-    Pricing invariant evaluation engine
+    Deterministic pricing + arbitrage construction engine
   </div>
+   <p style="color:var(--faint); font-size:0.85rem;">
+  Example: Put-Call parity violation → constructed hedge trade
+</p>
+<p style="
+  margin-top:10px;
+  color:var(--accent);
+  font-size:0.85rem;
+  font-weight:500;
+">
+  Click to view live arbitrage detection →
+</p>
 
   <div class="links" style="margin-top:10px;">
     <a href="#" style="opacity:0.6; pointer-events:none;">Application (Coming Soon)</a>
@@ -992,6 +1007,7 @@ AAD Systems’ deterministic systems do not detect failure — they prevent enti
   <p style="margin-top:16px; color:var(--accent2); max-width:760px;">
     These systems are designed for environments where correctness, stability, and interpretability are non-negotiable.
   </p>
+
 
 </section>
 
@@ -2102,6 +2118,91 @@ document.querySelectorAll(".section, .card").forEach(el => {
   observer.observe(el);
 });
 </script>
+<script>
+function openArbModal(){
+  document.getElementById("arb-modal").style.display = "flex";
+}
+
+function closeArbModal(){
+  document.getElementById("arb-modal").style.display = "none";
+}
+</script>
+
+
+</script>
+<!-- AEGON PRICING ARBITRAGE MODAL -->
+<div id="arb-modal" onclick="closeArbModal()" style="
+  position:fixed;
+  inset:0;
+  background:rgba(5,10,25,0.85);
+  backdrop-filter:blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+">
+
+<div onclick="event.stopPropagation()" style="
+    max-width:520px;
+    width:90%;
+    background:#050a18;
+    border:1px solid var(--line);
+    border-radius:12px;
+    padding:22px;
+    box-shadow:0 0 40px rgba(176,255,207,0.15);
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  ">
+
+    <div style="color:var(--accent2); margin-bottom:12px;">
+      ARBITRAGE DETECTED — STRUCTURAL VIOLATION
+    </div>
+
+    <div style="font-size:0.9rem; color:var(--muted); line-height:1.5;">
+
+      Underlying: SPX  
+      Spot: 4500  
+
+      <br><br>
+
+      Call (K=4500): 120  
+      Put (K=4500): 95  
+      Forward Implied: 4505  
+
+      <br><br>
+
+      <span style="color:var(--accent2);">
+        Invariant Violation: Put-Call Parity mismatch
+      </span>
+
+      <br><br>
+
+      Suggested Trade:
+      <br>
+      • Buy Put  
+      • Sell Call  
+      • Buy Underlying  
+
+      <br><br>
+
+      Expected Outcome:
+      <br>
+      → Risk-free convergence to invariant structure
+
+    </div>
+
+    <div style="margin-top:18px; text-align:right;">
+      <button onclick="closeArbModal()" style="
+        padding:6px 12px;
+        border:1px solid var(--line);
+        background:none;
+        color:var(--text);
+        border-radius:6px;
+        cursor:pointer;
+      ">Close</button>
+    </div>
+
+  </div>
+</div>
 
   </body>
 </html>
