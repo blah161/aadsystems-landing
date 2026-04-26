@@ -72,7 +72,7 @@ header h2{
     }
 
     .section{
-      margin-top: 64px;
+      margin-top: 56px;
     }
 
    .section h3{
@@ -91,23 +91,48 @@ header h2{
   font-size: 1.02rem;
 }
 
-    .grid{
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
-      gap: 26px;
-    }
+   .grid{
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 22px;
+  max-width: 1080px;
+  margin: 0 auto;
+}
+@media (max-width: 1200px){
+  .grid{
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media (max-width: 900px){
+  .grid{
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+@media (max-width: 600px){
+  .grid{
+    grid-template-columns: 1fr;
+  }
+}
 
   .card{
+  max-width: 100%;
   background: var(--panel);
   border: 1px solid var(--line);
   border-radius: 18px;
   box-shadow: 0 10px 40px rgba(0,0,0,0.45);
-  padding: 22px;
-  transition: all 0.25s ease;
+  padding: 20px;
+  transition:
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  box-shadow 0.35s ease,
+  outline 0.25s ease;
 }
 .product{
+  width: 100%;
+  max-width: 100%;
   position:relative;
-  padding:26px;
+  padding:20px;
 
   background: linear-gradient(
     180deg,
@@ -118,7 +143,6 @@ header h2{
   border:1px solid rgba(255,255,255,0.08);
   overflow:hidden;
 }
-
 .product::before{
   content:"";
   position:absolute;
@@ -127,15 +151,19 @@ header h2{
   background: linear-gradient(
     120deg,
     transparent 0%,
-    rgba(255,255,255,0.06) 40%,
-    transparent 80%
+    rgba(255,255,255,0.08) 45%,
+    transparent 90%
   );
 
-  transform: translateX(-120%);
-  transition: transform 0.6s ease;
-} 
+  transform: translateX(-140%);
+  opacity:0;
+
+  transition:
+    transform 0.9s cubic-bezier(0.22, 1, 0.36, 1),
+    opacity 0.4s ease;
+}
 .product:hover::before{
-  transform: translateX(120%);
+  transform: translateX(140%);
 }
 
 .product:hover::before{
@@ -143,10 +171,14 @@ header h2{
 }
 
 .product:hover{
-  transform: translateY(-8px) scale(1.01);
+  transform: translateY(-10px) scale(1.015);
+
   box-shadow:
-    0 30px 90px rgba(0,0,0,0.7),
-    0 0 40px rgba(138,180,255,0.15);
+    0 40px 120px rgba(0,0,0,0.75),
+    0 0 60px rgba(138,180,255,0.18);
+
+  outline: 1px solid rgba(176,255,207,0.35);
+  z-index: 5;
 }
 
 .card:hover{
@@ -158,21 +190,52 @@ header h2{
   margin: 0 0 6px 0;
   font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 
   color: #fff;
 
-  transition: all 0.25s ease;
+  transition:
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  box-shadow 0.35s ease,
+  outline 0.25s ease;
 }
 .card h4{
   margin: 0 0 6px 0;
   font-size: 1.35rem;
   font-weight: 600;
-  letter-spacing: -0.01em;
+  letter-spacing: -0.015em;
 
   color: #fff;
 
-  transition: all 0.25s ease;
+  transition:
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  box-shadow 0.35s ease,
+  outline 0.25s ease;
+}
+.card-title {
+  font-size: 1.05rem;          /* smaller = matches top card */
+  font-weight: 600;
+  letter-spacing: 0.01em;
+  color: #ffffff;
+  margin-bottom: 8px;
+
+  text-rendering: optimizeLegibility;
+  -webkit-font-smoothing: antialiased;
+}
+
+.card-tags {
+  margin: 0.5rem 0 0.75rem 0;
+}
+
+.tag {
+  display: inline-block;
+  padding: 4px 10px;
+  margin-right: 6px;
+  border-radius: 999px;
+  background: rgba(255,255,255,0.08);
+  border: 1px solid rgba(255,255,255,0.15);
+  font-size: 0.75rem;
+  color: #c9d1d9;
 }
 
   .card p{
@@ -180,6 +243,23 @@ header h2{
   color: rgba(255,255,255,0.72);
   font-size: 0.98rem;
   line-height: 1.5;
+}
+
+.card-list {
+  margin: 0;
+  padding-left: 18px;
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.6;
+}
+
+.card-list li {
+  margin-bottom: 6px;
+}
+
+.highlight {
+  color: var(--accent2);
+  font-weight: 500;
 }
 
     .links a{
@@ -637,7 +717,10 @@ header h2{
     0 6px 18px rgba(138,180,255,0.35),
     0 0 20px rgba(176,255,207,0.25);
 
-  transition: all 0.25s ease;
+  transition:
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  box-shadow 0.35s ease,
+  outline 0.25s ease;
 }
 
 .btn-primary:hover{
@@ -653,7 +736,10 @@ header h2{
   border:1px solid var(--line);
   color:var(--text);
 
-  transition: all 0.25s ease;
+  transition:
+  transform 0.35s cubic-bezier(0.22, 1, 0.36, 1),
+  box-shadow 0.35s ease,
+  outline 0.25s ease;
 }
 
 .btn-secondary:hover{
@@ -699,18 +785,33 @@ header h2{
 
 .product.aegon{
   border:1px solid rgba(176,255,207,0.35);
+  box-shadow: 0 0 20px rgba(176,255,207,0.08);
 }
-
 .product.verix{
   border:1px solid rgba(138,180,255,0.35);
 }
-
+.pricing-card:hover::after{
+  content:"CLICK";
+  position:absolute;
+  bottom:12px;
+  right:16px;
+  font-size:0.7rem;
+  color:var(--accent2);
+  opacity:0.8;
+  letter-spacing:0.1em;
+}
 .btn-secondary{
   padding:10px 18px;
   border-radius:8px;
   border:1px solid var(--line);
   color:var(--text);
   text-decoration:none;
+}
+
+.research-section {
+  max-width: 900px;
+  margin: 0 auto;
+  padding-right: 80px; /* prevents nav overlap */
 }
 
   </style>
@@ -825,6 +926,112 @@ header h2{
 
   </div>
 
+  <div style="
+  margin-top:36px;
+  max-width:700px;
+  padding:0 18px;
+">
+
+  <div style="
+    font-size:0.7rem;
+    letter-spacing:0.14em;
+    color:var(--faint);
+    text-transform:uppercase;
+    margin-bottom:10px;
+  ">
+    Research & Publications
+  </div>
+
+  <div style="
+    padding:16px 18px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:rgba(255,255,255,0.03);
+  ">
+
+    <div style="
+  margin-top:36px;
+  max-width:700px;
+  padding:0 18px;
+">
+
+  <!-- FIRST CARD -->
+  <div style="
+    padding:16px 18px;
+    border:1px solid var(--line);
+    border-radius:10px;
+    background:rgba(255,255,255,0.03);
+  ">
+
+    <div style="
+      font-size:1.05rem;
+      font-weight:600;
+      margin-bottom:10px;
+      color:#fff;
+    ">
+      Executable Gödel Encodings: A Verified Runtime for Logical Syntax
+      <div class="badge">
+        Type Theory · Formal Logic · Gödel Encoding
+      </div>
+    </div>
+
+    <ul style="
+      margin:0;
+      padding-left:18px;
+      color:var(--muted);
+      font-size:0.92rem;
+      line-height:1.6;
+    ">
+      <li>Formalized in Lean (dependent type theory)</li>
+      <li>Circulating within the computational logic / ITP community</li>
+      <li>Referenced by researchers in formal methods and logic programming</li>
+    </ul>
+
+    <div style="margin-top:12px;">
+      <a href="https://aadsystems.com/papers/godel_runtime_paper.pdf"
+         target="_blank"
+         style="font-size:0.9rem; font-weight:500; color:var(--accent2);">
+        Read Paper →
+      </a>
+    </div>
+
+  </div>
+
+  <!-- SECOND CARD -->
+  <div class="card paper" style="
+    margin-top:16px;
+    border:1px solid rgba(176,255,207,0.35);
+  ">
+
+    <div class="card-title">
+      Executable Σ-Types: Proof-Carrying Runtime (λΣᴿ)
+    </div>
+
+    <div class="badge" style="margin-left:0; margin-bottom:12px;">
+      Type Theory · Runtime Semantics · Verification
+    </div>
+
+    <ul class="card-list">
+      <li>Introduces a runtime architecture in which each execution step produces a dependent pair (state, proof)</li>
+      <li>Formalizes execution as an instance of Σ-type construction, shifting correctness from static verification to runtime semantics</li>
+      <li><span class="highlight">Execution produces certified state transitions — not just state updates</span></li>
+    </ul>
+
+    <div class="links">
+<a href="https://aadsystems.com/papers/Executable-sigma-types.pdf"
+   target="_blank" rel="noopener">
+   Read Paper →
+</a>
+
+<a href="#" onclick="openSigmaModal()" style="color:var(--accent2); font-weight:600;">
+  Launch Verified Runtime →
+</a>
+</div>
+
+  </div>
+
+</div>
+
   <!-- STACK NAV -->
   <div class="stack-nav" style="
     margin-top:24px;
@@ -860,6 +1067,8 @@ header h2{
 "></div>
 </header>
 
+<main>
+
 <!-- ARCH STRIP -->
 <div style="text-align:center; margin-top:20px; color:var(--faint); font-size:0.85rem;">
   Structural Pipeline — From Mathematical Invariance to Executable Systems
@@ -882,11 +1091,20 @@ header h2{
   <div class="arch-node">Compilers</div>
 
 </div>
+
+
+
+</section>
 <section class="section">
 
-  <div class="grid">
+  <div class="grid" style="
+  max-width:1200px;
+  margin:0 auto;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+">
 
-  <div class="card product aegon" style="background: linear-gradient(180deg, rgba(176,255,207,0.08), rgba(255,255,255,0.02));">
+<div class="card product aegon" style="background: linear-gradient(180deg, rgba(176,255,207,0.08), rgba(255,255,255,0.02));">
+
   <div class="product-label">INFRASTRUCTURE</div>
 
   <h4>AEGON Core</h4>
@@ -899,7 +1117,14 @@ header h2{
   <div class="product-tag">
     Infrastructure correctness engine
   </div>
+
+  <div class="links" style="margin-top:10px;">
+    <a href="https://aegon-core.onrender.com/" target="_blank">Application</a>
+    <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank">Paper</a>
+  </div>
+
 </div>
+ 
 
     <div class="card product verix">
   <div class="product-label">FINANCIAL SYSTEMS</div>
@@ -941,9 +1166,20 @@ header h2{
   <div class="product-tag">
     Deterministic pricing + arbitrage construction engine
   </div>
-   <p style="color:var(--faint); font-size:0.85rem;">
-  Example: Put-Call parity violation → constructed hedge trade
-</p>
+
+  <p style="
+    margin-top:10px;
+    color:var(--accent2);
+    font-size:0.85rem;
+    font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+    letter-spacing:0.04em;
+  ">
+    [ OPEN LIVE ARBITRAGE TRACE ]
+  </p>
+
+  <p style="color:var(--faint); font-size:0.85rem;">
+    Example: Put-Call parity violation → constructed hedge trade
+  </p>
 <p style="
   margin-top:10px;
   color:var(--accent);
@@ -957,15 +1193,79 @@ header h2{
     <a href="#" style="opacity:0.6; pointer-events:none;">Application (Coming Soon)</a>
     <a href="#" style="opacity:0.6; pointer-events:none;">Paper (Coming Soon)</a>
   </div>
+  </div>
 
+<!-- ===== NEW AEGON CARDS ===== -->
+
+<div class="card product aegon">
+  <div class="product-label">FINANCIAL SYSTEMS</div>
+
+  <h4>
+    AEGON FX
+    <span class="badge">Upcoming</span>
+  </h4>
+
+  <p>
+    Deterministic enforcement of covered interest parity across global FX markets,
+    identifying structural mispricing and constructing executable arbitrage flows.
+  </p>
+
+  <div class="product-tag">
+    FX arbitrage + parity enforcement engine
+  </div>
 </div>
+
+
+<div class="card product aegon">
+  <div class="product-label">FINANCIAL SYSTEMS</div>
+
+  <h4>
+    AEGON Futures
+    <span class="badge">Upcoming</span>
+  </h4>
+
+  <p>
+    Deterministic evaluation of cost-of-carry relationships across futures curves,
+    isolating convergence trades under strict pricing invariants.
+  </p>
+
+  <div class="product-tag">
+    Futures convergence + carry arbitrage engine
+  </div>
+</div>
+
+
+<div class="card product aegon" style="
+  border:1px solid rgba(176,255,207,0.45);
+  box-shadow: 0 0 30px rgba(176,255,207,0.18);
+">
+
+  <div class="product-label">FLAGSHIP SYSTEM</div>
+
+  <h4>
+    AEGON Cross-Asset
+    <span class="badge">Upcoming</span>
+  </h4>
+
+  <p>
+    Institutional-grade invariant engine spanning FX, options, and futures,
+    enforcing cross-market structural consistency and exposing capital-efficient arbitrage structures.
+  </p>
+
+  <p style="color:var(--accent2); font-weight:500;">
+    Global structure enforcement across asset classes.
+  </p>
+
+  <div class="product-tag">
+    Cross-asset arbitrage + structural consistency engine
+  </div>
+</div>
+
+<!-- ===== END NEW CARDS ===== -->
 
   </div>
 
 </section>
-
-<main>
-
 
 
 <section class="section" id="why-invariant-systems">
@@ -1011,11 +1311,13 @@ AAD Systems’ deterministic systems do not detect failure — they prevent enti
 
 </section>
 
+
+
 <section class="section" id="who-this-is-for">
 
   <h3>Applications — Infrastructure & Financial Systems</h3>
 
-  <div class="grid" style="margin-top:18px;">
+  <div class="grid" style="margin-top:18px; grid-template-columns: repeat(2, 1fr);">
 
     <div class="card" id="infrastructure">
       <h4>Infrastructure Systems</h4>
@@ -1165,7 +1467,10 @@ transformations compose.
   </p>
 
   <p>
-    Current work includes semantic compilers, verification engines, Gödel-based execution systems, and regime-theoretic physical models.
+Current work includes semantic compilers, verification engines, 
+<span style="color:var(--accent2); font-weight:500;">
+Gödel-based execution systems
+</span>, and regime-theoretic physical models.
   </p>
 
 </section>
@@ -1401,15 +1706,15 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     with implementation forthcoming.
   </p>
   <div class="links">
-    <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank" rel="noopener">Paper</a>
-  </div>
+  <a href="https://YOUR-APP-URL" target="_blank">Application</a>
+  <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
+  <a href="https://YOUR-DOC-URL" target="_blank">Documentation</a>
 </div>
       </div>
 
       <div class="card">
         <h4>AEGON Core</h4>
         <p>
-  <p>
   Deterministic engine that classifies live system state into a finite,
   invariant failure ontology.
 </p>
@@ -1465,58 +1770,6 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     </div>
   </section>
 
-<section class="section" id="flagship-systems">
-  <h3>Flagship Systems</h3>
-
-  <p>
-    Core operational systems implementing invariant semantics at execution level.
-  </p>
-
-  <div class="grid">
-
-    <!-- AEGON CORE (FLAGSHIP) -->
-    <div class="card" style="border:1px solid rgba(176,255,207,0.35);">
-      <h4>AEGON Core <span class="badge">Flagship System</span></h4>
-      <p>
-        A semantic classification engine that maps operational systems into a finite
-        failure-state ontology, eliminating metric ambiguity and enforcing invariant system states before execution.
-      </p>
-      <p style="color:var(--accent2); font-weight:500;">
-        Prevents entire classes of system failure through invariant state enforcement.
-      </p>
-      <div class="links">
-        <a href="https://aegon-core.onrender.com/" target="_blank">Application</a>
-        <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank">Paper</a>
-      </div>
-    </div>
-
-    <!-- AEGON POLICY COMPILER -->
-    <div class="card">
-      <h4>AEGON Policy Compiler <span class="badge">Specification</span></h4>
-      <p>
-        A deterministic compiler that maps failure semantics into canonical policy algebra,
-        producing non-executing policy artifacts for governance and automated systems.
-      </p>
-      <div class="links">
-        <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
-      </div>
-    </div>
-
-    <!-- VERIX CORE -->
-    <div class="card">
-      <h4>VERIX Core <span class="badge">Verification Engine</span></h4>
-      <p>
-        A deterministic logic verification engine evaluating formally encoded rule systems
-        using canonical Gödel-numbered representations.
-      </p>
-      <div class="links">
-        <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
-      </div>
-    </div>
-
-  </div>
-</section>
-Invariant Field Theory is the foundational framework of this lab, formalizing meaning as invariant structure over structured spaces and grounding all systems and research developed below.
 <!-- MATHEMATICAL RESEARCH INTRO -->
 <section class="section" id="">
   <div class="section-divider"></div>
@@ -1537,37 +1790,7 @@ All papers below are developed within the Invariant Field Theory framework and r
 
   <div class="grid" style="margin-top:18px;">
     <!-- Invariant Field Theory -->
-<div class="card paper" style="
-  border:1px solid rgba(255,210,140,0.55);
-  box-shadow: 0 0 28px rgba(255,210,140,0.18);
-">
-  <h4>
-    Invariant Field Theory — Foundational Statement
-    <span class="badge">FOUNDATIONAL · Geometry · Cohomology · Field Theory</span>
-  </h4>
 
-  <p>
-A foundational cohomological field theory of meaning defined over structured spaces, establishing the invariant semantic framework underlying all systems developed in this lab.
-</p>
-
-<p>
-Establishes a unified framework in which systems are modeled as structured transformations over defined spaces,
-with correctness determined by consistency under transformation and well-defined system constraints.
-</p>
-
-<p style="color:var(--accent2); font-weight:500;">
-All subsequent research papers are realizations or extensions of this theory.
-</p>
-<p style="color:var(--muted); max-width:720px;">
-All systems and compilers presented in this lab are executable realizations of invariant structure under transformation.
-</p>
-
- <div class="links">
-  <a href="https://aadsystems.com/papers/semantic_field_theory.html"
-     target="_blank" rel="noopener">
-    View Foundational Statement
-  </a>
-</div>
     
   </div>
 </div>
@@ -1628,17 +1851,10 @@ A cohomological formulation of semantic descent as a local-to-global obstruction
 with direct physical interpretation in relativistic systems.
 </p>
 
-<p>
-Identifies event horizons and black holes as nontrivial cohomology classes
-obstructing global invariant structure.<br>
-These are not singularities of spacetime structure, but boundaries of semantic coherence—regions in which global invariant meaning fails to exist.
-</p>
-<p style="color:var(--accent2); font-weight:500;">
-Within this framework, black holes mark the boundary of global semantic descent, where invariant structure cannot be extended across observational frames and meaning cannot be consistently reconstructed.
-</p>
-<p style="color:var(--muted); max-width:720px;">
-Within SRRC, this obstruction appears as the failure of invariant computation, where no transformation sequence yields a globally consistent output across frames.
-</p>
+Identifies event horizons and black holes as nontrivial cohomology classes obstructing global invariant structure.
+
+Within this framework, black holes mark the boundary of global semantic descent—regions where invariant structure cannot be extended across observational frames.
+
       <div class="links">
         <a href="https://aadsystems.com/papers/Cohomological_Obstructions_to_Global_Semantic_Descent.pdf"
            target="_blank" rel="noopener">
@@ -1851,7 +2067,7 @@ with invariant evaluation and constraint-driven consistency.
     </div>
 
     <!-- GEOMETRY COMPILER -->
-    <div class="card paper" style="border:1px solid rgba(176,255,207,0.35);">
+    <div class="card paper">
       <h4>
         Einstein Geometry Compiler
         <span class="badge">COMPILER · Execution</span>
@@ -1915,23 +2131,22 @@ with invariant evaluation and constraint-driven consistency.
      <!-- SELECTED RELATIVITY PAPERS -->
     <div style="margin-top: 36px;" id="papers">
       <h3 style="margin-top: 36px;">
+  <h3>
   Systems Derived from Invariance Theory
 </h3>
 
-      <p style="color: var(--muted); max-width: 760px; margin-bottom: 28px;">
-        Two foundational papers — <strong>Semantic Relativity</strong> and 
-<strong>The Relativity Principle: Regime Formulation</strong> — present 
-relativity as a structural theory of invariant meaning.  These works formalize observational equivalence, regime structure, and 
-semantic invariance as the organizing principles of physical interpretation.
-      </p>
+<p style="color: var(--muted); max-width: 760px;">
+Two foundational papers — <strong>Semantic Relativity</strong> and 
+<strong>The Relativity Principle: Regime Formulation</strong> — define 
+relativity as a structural theory of invariant meaning.
+</p>
 
   <!-- AEGON POLICY COMPILER -->
   <div class="card">
-    <h4>AEGON Policy Compiler <span class="badge">Specification</span></h4>
-    <p>
-      A deterministic compiler that maps failure semantics into canonical policy algebra,
-      producing non-executing policy artifacts for governance and automated systems.
-    </p>
+    <h3>AEGON Policy Compiler <span>Specification</span></h3>
+<p>
+Formal compiler mapping failure semantics into executable policy structures.
+</p>
     <div class="links">
       <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
     </div>
@@ -1939,11 +2154,10 @@ semantic invariance as the organizing principles of physical interpretation.
 
   <!-- VERIX CORE -->
   <div class="card">
-    <h4>VERIX Core <span class="badge">Verification Engine</span></h4>
-    <p>
-      A deterministic logic verification engine evaluating formally encoded rule systems
-      using canonical Gödel-numbered representations.
-    </p>
+    <h3>VERIX Core <span>Verification Engine</span></h3>
+<p>
+Deterministic verification engine ensuring structural correctness of execution logic.
+</p>
     <div class="links">
       <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
     </div>
@@ -2123,10 +2337,17 @@ function openArbModal(){
   document.getElementById("arb-modal").style.display = "flex";
 }
 
+function openSigmaModal(){
+  document.getElementById("sigma-modal").style.display = "flex";
+}
+
+function closeSigmaModal(){
+  document.getElementById("sigma-modal").style.display = "none";
+}
+
 function closeArbModal(){
   document.getElementById("arb-modal").style.display = "none";
 }
-</script>
 
 
 </script>
@@ -2200,6 +2421,37 @@ function closeArbModal(){
         cursor:pointer;
       ">Close</button>
     </div>
+
+  </div>
+</div>
+
+<!-- SIGMA RUNTIME MODAL -->
+<div id="sigma-modal" onclick="closeSigmaModal()" style="
+  position:fixed;
+  inset:0;
+  background:rgba(5,10,25,0.85);
+  backdrop-filter:blur(6px);
+  display:none;
+  align-items:center;
+  justify-content:center;
+  z-index:2000;
+">
+
+  <div onclick="event.stopPropagation()" style="
+    width:90%;
+    max-width:900px;
+    height:80vh;
+    background:#050a18;
+    border:1px solid var(--line);
+    border-radius:12px;
+    overflow:hidden;
+    box-shadow:0 0 40px rgba(176,255,207,0.15);
+  ">
+
+    <iframe
+      src="https://sigma-runtime-demo.onrender.com"
+      style="width:100%; height:100%; border:none;">
+    </iframe>
 
   </div>
 </div>
