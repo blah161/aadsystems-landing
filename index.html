@@ -678,11 +678,11 @@ header h2{
 }
 .hero{
   margin-top:60px;
-  max-width:780px;
+  max-width:1050px;
 }
 
 .hero h1{
-  font-size:3.8rem;
+  font-size:3.3rem;
   font-weight:600;
   line-height:1.08;
   letter-spacing:-0.03em;
@@ -691,6 +691,20 @@ header h2{
   opacity:0;
   transform: translateY(12px);
   animation: heroFade 1s ease forwards;
+}
+
+.hero-secondary{
+  display:inline-block;
+  font-size:2.55rem;
+  white-space:nowrap;
+  letter-spacing:-0.025em;
+}
+
+@media (max-width:900px){
+  .hero-secondary{
+    font-size:2.25rem;
+    white-space:normal;
+  }
 }
 
 .hero-sub{
@@ -892,16 +906,16 @@ header h2{
     -webkit-background-clip: text;
     -webkit-text-fill-color: transparent;
   ">
-    Executable Type Theory
+    Executable Formal Systems
   </span>
   <br>
-  <span style="
+  <span class="hero-secondary" style="
   color:var(--accent2);
   text-shadow: 0 0 10px rgba(176,255,207,0.25);
   animation: heroFade 1s ease forwards, glowPulse 3.2s ease-in-out infinite;
   animation-delay: 0.2s, 1.2s;
   ">
-    Deterministic Systems
+    Deterministic Compilers · Semantic Infrastructure
   </span>
 </h1>
 
