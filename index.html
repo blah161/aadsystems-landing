@@ -828,6 +828,243 @@ header h2{
   padding-right: 80px; /* prevents nav overlap */
 }
 
+/* =========================================================
+   INTELLECTUAL LINEAGE
+   ========================================================= */
+
+.lineage-section{
+  max-width: 960px;
+  margin: 72px auto 0 auto;
+  scroll-margin-top: 90px;
+}
+
+.lineage-intro{
+  max-width: 780px;
+  margin-bottom: 32px;
+}
+
+.lineage-kicker{
+  margin-bottom: 10px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.74rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: var(--faint);
+}
+
+.lineage-title{
+  margin: 0 0 16px 0;
+  font-size: 2rem;
+  line-height: 1.2;
+  font-weight: 600;
+  letter-spacing: -0.025em;
+  color: #ffffff;
+}
+
+.lineage-summary{
+  max-width: 760px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 1.05rem;
+  line-height: 1.7;
+}
+
+.lineage-summary strong{
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+.lineage-timeline{
+  position: relative;
+  margin-top: 38px;
+  padding-left: 36px;
+}
+
+.lineage-timeline::before{
+  content: "";
+  position: absolute;
+  top: 4px;
+  bottom: 4px;
+  left: 10px;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    var(--accent),
+    rgba(176,255,207,0.55),
+    var(--accent2)
+  );
+  box-shadow: 0 0 14px rgba(138,180,255,0.2);
+}
+
+.lineage-entry{
+  position: relative;
+  margin-bottom: 24px;
+  padding: 22px 24px;
+
+  background: linear-gradient(
+    180deg,
+    rgba(255,255,255,0.055),
+    rgba(255,255,255,0.025)
+  );
+
+  border: 1px solid var(--line);
+  border-radius: 14px;
+  box-shadow: 0 14px 42px rgba(0,0,0,0.32);
+
+  transition:
+    transform 0.3s cubic-bezier(0.22, 1, 0.36, 1),
+    border-color 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.lineage-entry:hover{
+  transform: translateX(5px);
+  border-color: rgba(138,180,255,0.38);
+  box-shadow:
+    0 22px 60px rgba(0,0,0,0.45),
+    0 0 30px rgba(138,180,255,0.08);
+}
+
+.lineage-entry::before{
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: -32px;
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+
+  background: var(--accent);
+  border: 3px solid var(--bg);
+
+  box-shadow:
+    0 0 0 1px rgba(138,180,255,0.55),
+    0 0 14px rgba(138,180,255,0.55);
+}
+
+.lineage-entry.current{
+  border-color: rgba(176,255,207,0.42);
+
+  background: linear-gradient(
+    180deg,
+    rgba(176,255,207,0.10),
+    rgba(255,255,255,0.025)
+  );
+
+  box-shadow:
+    0 18px 55px rgba(0,0,0,0.42),
+    0 0 34px rgba(176,255,207,0.08);
+}
+
+.lineage-entry.current::before{
+  background: var(--accent2);
+
+  box-shadow:
+    0 0 0 1px rgba(176,255,207,0.65),
+    0 0 18px rgba(176,255,207,0.75);
+}
+
+.lineage-date{
+  margin-bottom: 5px;
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  font-size: 0.78rem;
+  letter-spacing: 0.1em;
+  text-transform: uppercase;
+  color: var(--accent2);
+}
+
+.lineage-name{
+  margin: 0;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.lineage-contribution{
+  margin: 4px 0 12px 0;
+  color: var(--accent);
+  font-size: 0.96rem;
+  font-weight: 500;
+}
+
+.lineage-entry p{
+  max-width: 760px;
+  margin: 0 0 12px 0;
+  color: var(--muted);
+  font-size: 0.97rem;
+  line-height: 1.65;
+}
+
+.lineage-insight{
+  padding-top: 11px;
+  border-top: 1px solid var(--line);
+  font-size: 0.92rem;
+  color: rgba(255,255,255,0.82);
+}
+
+.lineage-insight strong{
+  color: var(--accent2);
+}
+
+.lineage-disclaimer{
+  margin-top: 26px;
+  padding: 18px 20px;
+
+  border-left: 3px solid var(--accent2);
+  border-radius: 0 10px 10px 0;
+
+  background: rgba(176,255,207,0.045);
+
+  color: var(--muted);
+  font-size: 0.92rem;
+  line-height: 1.65;
+}
+
+.lineage-formula{
+  margin: 34px 0 0 0;
+  padding: 18px;
+
+  border: 1px solid rgba(138,180,255,0.22);
+  border-radius: 10px;
+
+  background: #050a18;
+
+  font-family: ui-monospace, SFMono-Regular, Menlo, monospace;
+  text-align: center;
+  color: var(--muted);
+}
+
+.lineage-formula .active{
+  color: var(--accent2);
+  font-weight: 600;
+}
+
+@media (max-width: 700px){
+  .lineage-section{
+    margin-top: 50px;
+  }
+
+  .lineage-title{
+    font-size: 1.65rem;
+  }
+
+  .lineage-timeline{
+    padding-left: 28px;
+  }
+
+  .lineage-timeline::before{
+    left: 7px;
+  }
+
+  .lineage-entry{
+    padding: 18px;
+  }
+
+  .lineage-entry::before{
+    left: -27px;
+  }
+}
+
   </style>
 </head>
 
@@ -839,6 +1076,7 @@ header h2{
   <h3>Navigate</h3>
 
   <a href="#top">Top</a>
+  <a href="#intellectual-lineage">Lineage</a>
 
   <div class="divider"></div>
 
@@ -876,6 +1114,7 @@ header h2{
   </div>
 
   <div class="instrument-nav">
+    <a href="#intellectual-lineage">Lineage</a>
     <a href="#research-program">Research</a>
     <a href="#systems">Systems</a>
     <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
@@ -1094,28 +1333,194 @@ Executable runtime systems capable of repairing structural violations through de
 
 <main>
 
+<main>
+
+<!-- INTELLECTUAL LINEAGE -->
+<section class="section lineage-section" id="intellectual-lineage">
+
+  <div class="lineage-intro">
+
+    <div class="lineage-kicker">
+      Intellectual Foundations
+    </div>
+
+    <h3 class="lineage-title">
+      From Logical Types to Verified Execution
+    </h3>
+
+    <p class="lineage-summary">
+      AAD Systems research participates in a lineage extending from the
+      logical hierarchy of Bertrand Russell, through typed computation,
+      proofs-as-programs, and dependent type theory, toward
+      <strong>Gödel-encoded executable systems and proof-producing runtimes.</strong>
+    </p>
+
+  </div>
+
+  <div class="lineage-timeline">
+
+    <article class="lineage-entry">
+
+      <div class="lineage-date">1908</div>
+
+      <h4 class="lineage-name">
+        Bertrand Russell
+      </h4>
+
+      <div class="lineage-contribution">
+        Theory of Types · Logical Stratification
+      </div>
+
+      <p>
+        Russell introduced a hierarchy of logical levels to prevent paradoxes
+        caused by unrestricted self-reference. Before a statement could be
+        evaluated as true or false, it first had to be recognized as belonging
+        to a valid logical type.
+      </p>
+
+      <div class="lineage-insight">
+        <strong>Foundational question:</strong>
+        Is this expression logically well formed?
+      </div>
+
+    </article>
+
+
+    <article class="lineage-entry">
+
+      <div class="lineage-date">1940</div>
+
+      <h4 class="lineage-name">
+        Alonzo Church
+      </h4>
+
+      <div class="lineage-contribution">
+        Simple Type Theory · Typed Lambda Calculus
+      </div>
+
+      <p>
+        Church united type structure with a formal calculus of functions,
+        application, abstraction, and reduction. Types became more than
+        restrictions on logical language: they became rules governing
+        computation.
+      </p>
+
+      <div class="lineage-insight">
+        <strong>Computational advance:</strong>
+        Types can govern how formal operations are performed.
+      </div>
+
+    </article>
+
+
+    <article class="lineage-entry">
+
+      <div class="lineage-date">1930s–1969</div>
+
+      <h4 class="lineage-name">
+        Haskell Curry &amp; William Howard
+      </h4>
+
+      <div class="lineage-contribution">
+        The Curry–Howard Correspondence
+      </div>
+
+      <p>
+        Curry and Howard exposed a deep structural correspondence between
+        propositions and types, and between proofs and programs. A proof of
+        an implication can be understood as a function that transforms
+        evidence of one proposition into evidence of another.
+      </p>
+
+      <div class="lineage-insight">
+        <strong>Central insight:</strong>
+        Proof construction and program construction share the same formal structure.
+      </div>
+
+    </article>
+
+
+    <article class="lineage-entry">
+
+      <div class="lineage-date">1971–1984</div>
+
+      <h4 class="lineage-name">
+        Per Martin-Löf
+      </h4>
+
+      <div class="lineage-contribution">
+        Intuitionistic Dependent Type Theory
+      </div>
+
+      <p>
+        Martin-Löf developed a constructive type theory in which propositions,
+        types, and proofs can depend on particular values. Computation could
+        therefore return not only a result, but evidence specifically concerning
+        the validity of that result.
+      </p>
+
+      <div class="lineage-insight">
+        <strong>New power:</strong>
+        A computed value can carry its own value-specific proof.
+      </div>
+
+    </article>
+
+
+    <article class="lineage-entry current">
+
+      <div class="lineage-date">2025–Present · Current Research Direction</div>
+
+      <h4 class="lineage-name">
+        Adrian Diamond
+      </h4>
+
+      <div class="lineage-contribution">
+        Executable Gödel Encodings · Proof-Producing Runtime Systems
+      </div>
+
+      <p>
+        Diamond’s research investigates Gödel encodings as operational
+        representations for formally verified computation. Logical syntax is
+        encoded, decoded, transformed, substituted, and executed through
+        deterministic mechanisms whose correctness properties are formally
+        established.
+      </p>
+
+      <p>
+        The broader architecture combines encoded rules, dependent types,
+        invariant execution, and proof-producing state transitions. The objective
+        is a runtime in which correctness is not merely checked after execution,
+        but becomes part of what execution produces.
+      </p>
+
+      <div class="lineage-insight">
+        <strong>Emerging architecture:</strong>
+        Encoded rule + current state → next state + proof of validity.
+      </div>
+
+    </article>
+
+  </div>
+
+  <div class="lineage-formula">
+    Russell → Church → Curry–Howard → Martin-Löf →
+    <span class="active">Executable Gödel Encodings</span>
+  </div>
+
+  <div class="lineage-disclaimer">
+    This timeline identifies the intellectual traditions on which the current
+    research builds. It does not claim that the historical importance of ongoing
+    work has already been established. The contribution is presented through its
+    papers, formal constructions, implementations, and independently evaluable
+    results.
+  </div>
+
+</section>
+
+<div class="section-divider"></div>
+
 <!-- ARCH STRIP -->
-<div style="text-align:center; margin-top:20px; color:var(--faint); font-size:0.85rem;">
-  Research Pipeline — From Executable Mathematics to Production Systems
-</div>
-
-<div class="arch-strip">
-
-  <div class="arch-node">Logical Encoding</div>
-  <div class="arch-arrow">→</div>
-
-  <div class="arch-node">Continuous Symmetry</div>
-  <div class="arch-arrow">→</div>
-
-  <div class="arch-node arch-highlight">AEGON Core</div>
-  <div class="arch-arrow">→</div>
-
-  <div class="arch-node">VERIX</div>
-  <div class="arch-arrow">→</div>
-
-  <div class="arch-node">Compilers</div>
-
-</div>
 
 
 
