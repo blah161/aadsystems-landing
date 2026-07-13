@@ -1256,7 +1256,7 @@ Published
 </p>
 
 <p>
-  <p>
+
   This architecture does more than support a single implementation: it turns
   Gödel encoding into reusable software infrastructure. Formal rules can move
   through an execution pipeline while preserving their machine-checked
@@ -1265,7 +1265,38 @@ Published
   systems, and proof-producing runtimes in which correctness is carried forward
   as part of execution rather than checked only after the fact.
 </p>
-</p>
+
+<div style="
+  margin-top:24px;
+  padding-top:20px;
+  border-top:1px solid var(--line);
+">
+
+  <div style="
+    margin-bottom:10px;
+    color:#ffffff;
+    font-size:1.08rem;
+    font-weight:600;
+  ">
+    Why This Matters for Modern Systems
+  </div>
+
+  <p>
+    Modern compilers, rule engines, and policy systems are commonly validated
+    through testing, leaving a potential gap between their intended semantics
+    and their actual execution. This work narrows that gap by establishing a
+    machine-checked correspondence between structural syntax and operations
+    performed over its encoded representation.
+  </p>
+
+  <p>
+    The result is a path toward deterministic software in which critical
+    transformations are governed by explicit formal specifications and verified
+    as part of system construction, rather than entrusted to heuristic behavior
+    or checked only after execution.
+  </p>
+
+</div>
 
 <div class="links">
 <a href="https://aadsystems.com/papers/godel_runtime_paper.pdf"
