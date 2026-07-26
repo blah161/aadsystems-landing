@@ -1075,31 +1075,37 @@ header h2{
 <nav id="floating-nav">
   <h3>Navigate</h3>
 
+  <div class="nav-group-label">FOUNDATIONS</div>
+
   <a href="#top">Top</a>
-  <a href="#intellectual-lineage">Lineage</a>
+  <a href="#research-overview">Research Overview</a>
+  <a href="#intellectual-lineage">Intellectual Lineage</a>
+  <a href="#research-methodology">Research Methodology</a>
 
   <div class="divider"></div>
 
-  <a href="#why-invariant-systems">Why</a>
+  <div class="nav-group-label">RESEARCH PROGRAM</div>
+
+  <a href="#flagship-research">Flagship Papers</a>
+  <a href="#research-program">Current Research Program</a>
+  <a href="#mathematical-research">Mathematical Research</a>
+  <a href="#research-timeline">Research Timeline</a>
+
+  <div class="divider"></div>
+
+  <div class="nav-group-label">SYSTEMS</div>
+
+  <a href="#why-invariant-systems">Why Deterministic Systems</a>
   <a href="#who-this-is-for">Applications</a>
-
-  <a href="#infrastructure">Infrastructure</a>
-  <a href="#finance">Finance & Trading</a>
-
-  <div class="divider"></div>
-
-  <a href="#systems">Systems</a>
-  <a href="#flagship-systems">Flagship</a>
+  <a href="#systems">Operational Systems</a>
+  <a href="#system-status">Development Status</a>
 
   <div class="divider"></div>
 
-  <a href="#systems-lab">Lab</a>
-  <a href="#research-program">Research</a>
+  <div class="nav-group-label">LAB</div>
+
+  <a href="#systems-lab">About the Lab</a>
   <a href="#papers">Papers</a>
-
-  <div class="divider"></div>
-
-  <a href="#system-status">Status</a>
 </nav>
 
 <!-- TOP BAR (FIXED) -->
@@ -1114,14 +1120,13 @@ header h2{
   </div>
 
   <div class="instrument-nav">
-    <a href="#intellectual-lineage">Lineage</a>
-    <a href="#research-program">Research</a>
-    <a href="#systems">Systems</a>
-    <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
-    <a href="#papers">Papers</a>
-    <a href="mailto:adrian@aadsystems.com">Contact</a>
-    <a href="https://aadsystems.com" target="_blank">AAD Systems</a>
-  </div>
+  <a href="#research-overview">Foundations</a>
+  <a href="#research-program">Research Program</a>
+  <a href="#why-invariant-systems">Systems</a>
+  <a href="#systems-lab">Laboratory</a>
+  <a href="mailto:adrian@aadsystems.com">Contact</a>
+  <a href="https://aadsystems.com" target="_blank">AAD Systems</a>
+</div>
 
 </div>
 <header>
@@ -1320,12 +1325,13 @@ header h2{
   max-width:720px;
 ">
 
-<div style="
+<div id="flagship-research" style="
   font-size:0.72rem;
   letter-spacing:0.16em;
   color:var(--faint);
   text-transform:uppercase;
   margin-bottom:14px;
+  scroll-margin-top:90px;
 ">
 FLAGSHIP RESEARCH
 </div>
@@ -1448,7 +1454,7 @@ target="_blank">
 Read Paper →
 </a>
 
-<a href="#" onclick="openSigmaModal()">
+<a href="#" onclick="openSigmaModal(); return false;">
 Launch Runtime →
 </a>
 
@@ -1525,9 +1531,6 @@ Executable runtime systems capable of repairing structural violations through de
 </header>
 
 <main>
-
-<main>
-
 <!-- INTELLECTUAL LINEAGE -->
 <section class="section lineage-section" id="intellectual-lineage">
 
@@ -1701,7 +1704,7 @@ Executable runtime systems capable of repairing structural violations through de
     <span class="active">Executable Gödel Encodings</span>
   </div>
 
-  <div class="lineage-disclaimer">
+    <div class="lineage-disclaimer">
     This timeline identifies the intellectual traditions on which the current
     research builds. It does not claim that the historical importance of ongoing
     work has already been established. The contribution is presented through its
@@ -1711,9 +1714,34 @@ Executable runtime systems capable of repairing structural violations through de
 
 </section>
 
+<section
+  class="section"
+  id="research-methodology"
+  style="scroll-margin-top:90px;"
+>
+  <div class="lineage-kicker">
+    Research Methodology
+  </div>
+
+  <h3 class="lineage-title">
+    From Architectural Questions to Executable Systems
+  </h3>
+
+  <p style="max-width:760px;">
+    This section is currently in development. It will describe the methodology
+    through which foundational architectural questions are developed into formal
+    theories, runtime architectures, compilers, verification systems, and
+    executable software.
+  </p>
+
+  <div class="badge" style="margin-left:0;">
+    In Progress
+  </div>
+</section>
+
 <div class="section-divider"></div>
 
-This research investigates how ideas from mathematical logic, type theory, and Gödel encoding can be realized as executable, deterministic computational systems.
+
 <!-- ARCH STRIP -->
 
 
@@ -2114,14 +2142,24 @@ Gödel-based execution systems
 
 <section class="section" id="research-program">
 <div class="section-divider"></div>
-  <h3>Research Program</h3>
+ <h3>Current Research Program</h3>
 
   
 
   <p>
-    The research program translates the lab’s foundational principles into concrete systems, compilers, and formal results.
+The current research program extends a sequence of investigations spanning
+mathematical physics, geometry, logic, type theory, runtime semantics,
+and executable computation. Each project builds on the theoretical
+foundations established by earlier work, forming a coherent progression
+from foundational mathematics to executable software systems.
+</p>
 
-Work is organized into domains that produce both theoretical structures and executable implementations.
+<p>
+The projects below represent the laboratory's active research directions.
+Each contributes either new mathematical foundations, executable runtime
+architectures, compiler systems, or verification technologies that
+ultimately become operational software.
+</p>
   </p>
 
   <div class="grid" style="margin-top:18px;">
@@ -2279,7 +2317,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
   </div>
 </section>
 
-<section class="section">
+<section class="section" id="research-timeline" style="scroll-margin-top:90px;">
   <h3>Research Timeline</h3>
 
   <div class="timeline">
@@ -2330,9 +2368,9 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     with implementation forthcoming.
   </p>
   <div class="links">
-  <a href="#" onclick="alert('Application coming soon')">Application</a>
+<a href="#" onclick="alert('Application coming soon'); return false;">Application</a>
   <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
-  <a href="#" onclick="alert('Documentation coming soon')">Documentation</a>
+<a href="#" onclick="alert('Documentation coming soon'); return false;">Documentation</a>
 </div>
       </div>
 
@@ -2395,7 +2433,7 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
   </section>
 
 <!-- MATHEMATICAL RESEARCH INTRO -->
-<section class="section" id="">
+<section class="section" id="mathematical-research" style="scroll-margin-top:90px;">
   <div class="section-divider"></div>
 <h3>Mathematical Research</h3>
   <p>
