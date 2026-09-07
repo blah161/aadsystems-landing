@@ -1351,7 +1351,7 @@ Published
 
 <p style="
   margin-top:16px;
-  ￼margin-bottom:14px;
+  margin-bottom:14px;
   color:var(--accent2);
   font-size:1.22rem;
   font-weight:650;
@@ -1436,6 +1436,65 @@ Read Paper →
 </div>
 
 <!-- ====================================================== -->
+<!-- EXECUTABLE GODEL ENCODINGS INTERACTIVE COMPANION       -->
+<!-- ====================================================== -->
+
+<div class="card" style="
+  margin-top:16px;
+  border:1px solid rgba(138,180,255,0.30);
+  background:linear-gradient(
+    180deg,
+    rgba(138,180,255,0.07),
+    rgba(255,255,255,0.025)
+  );
+">
+
+<div style="
+  font-size:0.72rem;
+  letter-spacing:0.16em;
+  color:var(--accent);
+  text-transform:uppercase;
+  margin-bottom:10px;
+">
+Interactive Learning Companion
+</div>
+
+<div class="card-title">
+Executable Gödel Encodings — Interactive Companion
+</div>
+
+<p style="
+  margin-top:14px;
+  color:#ffffff;
+  font-weight:500;
+">
+Explore the architecture of the paper through an interactive structural guide
+to executable Gödel encoding and verified logical syntax.
+</p>
+
+<p>
+The companion moves through formal syntax, Gödel encoding, substitution,
+arithmetic simulation, diagonalization, the theorem dependency structure,
+and the runtime interpretation of the resulting machinery.
+</p>
+
+<p style="color:var(--muted);">
+Designed to be used alongside or after the paper, it provides a second path
+through the mathematics by making the relationships between the constructions
+explicit and easier to inspect.
+</p>
+
+<div class="links">
+<a href="https://aadsystems.com/godel_encoding_interactive_companion.html"
+   target="_blank"
+   rel="noopener noreferrer">
+Launch Interactive Companion →
+</a>
+</div>
+
+</div>
+
+<!-- ====================================================== -->
 <!-- INDEPENDENT ACADEMIC RECOGNITION                       -->
 <!-- ====================================================== -->
 
@@ -1476,7 +1535,8 @@ Read Paper →
     On March 29, 2026, mathematician José A. Alonso independently highlighted
     <em>Executable Gödel Encodings: A Verified Runtime for Logical Syntax</em>,
     linking directly to the paper and identifying it with the research areas of
-    Lean theorem proving, interactive theorem proving, logic, and mathematics.
+        Lean theorem proving, interactive theorem proving, logic, and mathematics.
+  </p>
 
  <div class="links">
   <a href="https://x.com/Jose_A_Alonso/status/2038288903631708656"
@@ -1594,19 +1654,30 @@ transformation groups and invariant geometric structures.
 
 </div>
 
-<div class="card" style="margin-top:16px;">
+<div class="card paper" style="margin-top:16px;">
 
 <div class="card-title">
-Repair Algebras & Regenerative Runtimes
+Repair Algebras and Regenerative Runtimes:
+A Runtime Semantics for Biological Systems
 </div>
 
 <div class="badge" style="margin-left:0;">
-In Preparation
+Published
 </div>
 
 <p>
-Executable runtime systems capable of repairing structural violations through deterministic regeneration rather than fault recovery, extending invariant-based repair principles to computational and biological systems.
+A mathematical framework for modeling biological systems as regenerative
+runtimes governed by repair operations, viability conditions, semantic
+invariants, and formally defined recovery processes.
 </p>
+
+<div class="links">
+<a href="https://aadsystems.com/papers/Repair_Algebras_and_Regenerative_Runtimes__A_Runtime_Semantics_for_Biological_Systems.pdf"
+   target="_blank"
+   rel="noopener noreferrer">
+Read Paper →
+</a>
+</div>
 
 </div>
 
@@ -1643,6 +1714,9 @@ Executable runtime systems capable of repairing structural violations through de
     transparent
   );
 "></div>
+
+</div>
+</div>
 </header>
 
 <main>
@@ -1838,30 +1912,33 @@ Executable runtime systems capable of repairing structural violations through de
     Research Methodology
   </div>
 
-  <h3 class="lineage-title">
+    <h3 class="lineage-title">
     From Architectural Questions to Executable Systems
   </h3>
 
   <p style="max-width:760px;">
-    This section is currently in development. It will describe the methodology
-    through which foundational architectural questions are developed into formal
-    theories, runtime architectures, compilers, verification systems, and
-    executable software.
+    Research begins with an architectural question: what structure must remain
+    invariant for a system to preserve meaning, correctness, or admissibility
+    under transformation?
   </p>
 
-  <div class="badge" style="margin-left:0;">
-    In Progress
-  </div>
+  <p style="max-width:760px;">
+    That question is formalized as definitions, state spaces, admissible
+    transformations, equivalence relations, and invariants. The resulting theory
+    is then translated into runtime semantics, compiler rules, verification
+    procedures, and—where appropriate—executable software.
+  </p>
+
+  <p style="max-width:760px;">
+    The process is iterative: proofs expose missing assumptions, implementations
+    expose ambiguity, and both feed back into the formal model.
+  </p>
 </section>
 
 <div class="section-divider"></div>
 
-
 <!-- ARCH STRIP -->
 
-
-
-</section>
 <section class="section">
 
   <div class="grid" style="
@@ -1887,7 +1964,7 @@ Executable runtime systems capable of repairing structural violations through de
 
   <div class="links" style="margin-top:10px;">
     <a href="https://aegon-core.onrender.com/" target="_blank">Application</a>
-    <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank">Paper</a>
+    <a href="https://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank">Paper</a>
     <a href="https://aegon-core.onrender.com/static/documentation.html" target="_blank" rel="noopener">Documentation</a>
 
   </div>
@@ -2051,15 +2128,27 @@ Executable runtime systems capable of repairing structural violations through de
   margin-top:18px;
   font-size:1.05rem;
   color:var(--accent2);
+    <p style="max-width:760px;">
+    Many system failures arise from inconsistent structure rather than insufficient
+    data. Many tools are designed to predict, approximate, or detect problems after
+    they emerge.
+  </p>
+
+  <p style="
+  margin-top:18px;
+  font-size:1.05rem;
+  color:var(--accent2);
   font-weight:500;
   max-width:760px;
 ">
-AAD Systems’ deterministic systems do not detect failure — they prevent entire classes of failure from occurring.
+AAD Systems develops deterministic systems intended to prevent specified classes
+of structural failure by enforcing explicit invariants before execution.
 </p>
 
   <p style="max-width:760px;">
-    The systems developed in this lab take a different approach:
-    they enforce correctness by design, evaluating structure directly rather than relying on heuristics or probabilistic models.
+    The systems developed in this lab evaluate formally specified structure
+    directly, providing deterministic behavior where the governing assumptions
+    and invariants are defined.
   </p>
 
   <p style="max-width:760px;">
@@ -2067,9 +2156,9 @@ AAD Systems’ deterministic systems do not detect failure — they prevent enti
   </p>
 
   <p style="max-width:760px; color:var(--muted);">
-    • deterministic evaluation of system behavior<br>
-    • elimination of entire classes of failure<br>
-    • consistent interpretation across scale and environments
+    • deterministic evaluation of specified system behavior<br>
+    • prevention of defined structural failure modes<br>
+    • consistent interpretation across defined environments
   </p>
 
   <p style="margin-top:16px; color:var(--accent2); max-width:760px;">
@@ -2186,15 +2275,15 @@ Prevents drift, inconsistency, and misinterpretation across market regimes.
 
   
 
-  <p>
-    The central thesis of the lab is that meaning is not statistical, approximate,
-    or emergent from data, but instead arises from invariance under admissible
-    transformations. A system is correct precisely when its outputs descend to
-    invariant structure.
+    <p>
+    Within the AAD Systems research framework, meaning is modeled as invariance
+    under admissible transformations. Correctness is evaluated relative to
+    explicitly specified semantics, transformations, and invariants.
   </p>
 
   <p style="font-size:1.05rem; color:var(--accent2); font-weight:500; max-width:720px;">
-    AEGON prevents entire classes of system failure by enforcing invariant system states before execution.
+    AEGON is designed to prevent specified classes of structural failure by enforcing
+    invariant system-state constraints before execution.
 </p>
 
  <p>
@@ -2275,7 +2364,6 @@ Each contributes either new mathematical foundations, executable runtime
 architectures, compiler systems, or verification technologies that
 ultimately become operational software.
 </p>
-  </p>
 
   <div class="grid" style="margin-top:18px;">
 
@@ -2301,23 +2389,31 @@ ultimately become operational software.
 </div>
     </div>
 
-    <div class="card">
+        <div class="card">
       <h4>Compiler Systems</h4>
       <p>
-  Quantum compiler architecture for deterministic program construction and executable semantic systems.
-</p>
-
-<p style="color:var(--muted);">
-  Replace heuristic pipelines with formally defined transformation systems
-  that guarantee consistent outcomes across environments.
-</p>
-
-<p style="color:var(--accent2); font-weight:500;">
-  Used in infrastructure, verification, and financial systems where execution correctness must be guaranteed.
-</p>
+        Compiler architectures for deterministic program construction and
+        executable semantic systems.
       </p>
+
+      <p style="color:var(--muted);">
+        Replaces heuristic transformation steps, where appropriate, with formally
+        defined rules whose behavior can be inspected and verified.
+      </p>
+
       <div class="links">
         <a href="https://ecasm.aadsystems.com/">eCASM</a>
+      </div>
+    </div>
+
+    <div class="card">
+      <h4>Regenerative Runtimes &amp; Biological Computation</h4>
+      <p>
+        Formal models of repair, viability, semantic restoration, and regeneration
+        expressed through composable transformations and runtime semantics.
+      </p>
+      <div class="links">
+        <a href="https://aadsystems.com/papers/Repair_Algebras_and_Regenerative_Runtimes__A_Runtime_Semantics_for_Biological_Systems.pdf">Repair Algebras</a>
       </div>
     </div>
 
@@ -2328,8 +2424,8 @@ ultimately become operational software.
         is defined by invariance under transformation.
       </p>
       <div class="links">
-        <a href="http://aadsystems.com/papers/Semantic_Relativity__A_Completion_of_Special_Relativity.pdf">Semantic Relativity</a>
-        <a href="http://aadsystems.com/papers/The_Relativity_Principle__Regime_Formulation___Invariance__Meaning__and_Regime_Structure.pdf">Relativity Principle</a>
+        <a href="https://aadsystems.com/papers/Semantic_Relativity__A_Completion_of_Special_Relativity.pdf">Semantic Relativity</a>
+        <a href="https://aadsystems.com/papers/The_Relativity_Principle__Regime_Formulation___Invariance__Meaning__and_Regime_Structure.pdf">Relativity Principle</a>
       </div>
     </div>
 
@@ -2448,8 +2544,23 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     </div>
 
     <div class="timeline-item">
+      <span class="year">Mar 2026</span>
+      <span class="event">Publication of Executable Gödel Encodings: A Verified Runtime for Logical Syntax</span>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">Apr 2026</span>
+      <span class="event">Publication of Executable Σ-Types and proof-carrying runtime semantics</span>
+    </div>
+
+    <div class="timeline-item">
       <span class="year">2026</span>
       <span class="event">Publication of the Special Relativity Regime Compiler (SRRC)</span>
+    </div>
+
+    <div class="timeline-item">
+      <span class="year">Sep 2026</span>
+      <span class="event">Publication of Repair Algebras and Regenerative Runtimes and release of the Interactive Gödel Companion</span>
     </div>
 
     <div class="timeline-item">
@@ -2484,12 +2595,12 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
   </p>
   <div class="links">
 <a href="#" onclick="alert('Application coming soon'); return false;">Application</a>
-  <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
+  <a href="https://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
 <a href="#" onclick="alert('Documentation coming soon'); return false;">Documentation</a>
 </div>
       </div>
 
-      <div class="card">
+            <div class="card">
         <h4>AEGON Core</h4>
         <p>
   Deterministic engine that classifies live system state into a finite,
@@ -2497,17 +2608,17 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 </p>
 
 <p style="color:var(--muted);">
-  Identifies structural failure before it propagates—without heuristics,
-  metrics, or probabilistic models.
+  Identifies defined structural failure conditions through explicit state
+  classification rather than heuristic scoring.
 </p>
 
 <p style="color:var(--accent2); font-weight:500;">
-  Used by infrastructure teams to eliminate ambiguity, prevent outages, and reduce operational risk at scale.
-</p>
+  Designed for infrastructure settings where reducing ambiguity, outage risk,
+  and operational inconsistency is important.
 </p>
         <div class="links">
   <a href="https://aegon-core.onrender.com/" target="_blank" rel="noopener">Application</a>
-  <a href="http://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank" rel="noopener">Paper</a>
+  <a href="https://aadsystems.com/papers/The_AEGON_Core_Algebra.pdf" target="_blank" rel="noopener">Paper</a>
   <a href="https://aegon-core.onrender.com/static/documentation.html" target="_blank" rel="noopener">Documentation</a>
       </div>
 </div>
@@ -2525,13 +2636,13 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 </p>
 
 <p style="color:var(--muted);">
-  Ensures all outcomes are structurally valid and invariant under transformation.
+  Checks whether outcomes satisfy defined structural constraints and invariants.
 </p>
 
 <p style="color:var(--accent2); font-weight:500;">
-  Used in trading and financial systems to enforce correctness, eliminate drift, and prevent catastrophic execution errors.
+  Designed for trading and financial systems where execution logic must remain
+  consistent under defined transformations.
 </p>
-  </p>
   <div class="links">
   <a href="https://blah161.github.io/godel-numbering/docs/verix-pricing.html">Pricing</a>
 </div>
@@ -2598,7 +2709,9 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
 <section class="section" id="sft-layer">
 <h3>Flagship Research — Foundational Results</h3>
 <p style="max-width:760px;">
-All papers below are developed within the Invariant Field Theory framework and represent formal realizations, extensions, or applications of its invariant structure.
+These papers span several parts of the AAD Systems research program and develop
+related approaches to invariant structure, semantic descent, executable logic,
+and cohomological obstruction.
 </p>
   <p style="max-width:760px;">
     Foundational papers defining the core architecture of deterministic computation,
@@ -2606,11 +2719,7 @@ All papers below are developed within the Invariant Field Theory framework and r
   </p>
 
   <div class="grid" style="margin-top:18px;">
-    <!-- Invariant Field Theory -->
-
-    
-  </div>
-</div>
+    <!-- Foundational paper grid -->
 
     <!-- STRING THEORY PAPER -->
 <div class="card paper" style="border:1px solid rgba(255,180,120,0.35);">
@@ -2668,9 +2777,11 @@ A cohomological formulation of semantic descent as a local-to-global obstruction
 with direct physical interpretation in relativistic systems.
 </p>
 
-Identifies event horizons and black holes as nontrivial cohomology classes obstructing global invariant structure.
-
-Within this framework, black holes mark the boundary of global semantic descent—regions where invariant structure cannot be extended across observational frames.
+<p>
+Within the paper's framework, event horizons and black holes are modeled as
+nontrivial cohomological obstructions to global invariant structure. Black holes
+therefore mark a boundary of global semantic descent within the proposed model.
+</p>
 
       <div class="links">
         <a href="https://aadsystems.com/papers/Cohomological_Obstructions_to_Global_Semantic_Descent.pdf"
@@ -2716,7 +2827,6 @@ Where Gödel encoding governs discrete logical structure, Lie algebras arise
 inevitably from continuous symmetry, providing the algebraic backbone for
 physical and geometric invariants.  
 </p>
-    </p>
 
     <div class="card paper" style="margin-top: 18px;">
 <h4>
@@ -2802,8 +2912,8 @@ Relativistic physics is expressed as an executable transformation system whose o
     by transition relations whose global consistency is determined by the presence
     or absence of obstruction.
 
-    These structures are not only theoretical, but executable—forming the basis
-    for deterministic compilers and verification systems developed in this lab.
+                These formal structures provide foundations for deterministic compilers and
+    verification systems developed within the lab.
   </p>
 
   <div class="grid" style="margin-top:18px;">
@@ -2824,7 +2934,6 @@ on the absence of structural obstruction.
 Identifies failure modes in physical and mathematical systems as limits of global consistency,
 providing a unified framework for detecting structural breakdown.
 </p>
-      </p>
 
       <p style="color:var(--accent2); font-weight:500;">
         Defines obstruction as the condition for global consistency.
@@ -2851,7 +2960,6 @@ emerge as invariant outputs of constrained field configurations.
 Provides a structural interpretation of physics that replaces analytic complexity
 with invariant evaluation and constraint-driven consistency.
 </p>
-      </p>
 
       <p style="color:var(--accent2); font-weight:500;">
         Physical meaning emerges as invariant structure.
@@ -2945,16 +3053,15 @@ with invariant evaluation and constraint-driven consistency.
   under observer transformation, rather than from metric form alone.
 </p>
      <!-- SELECTED RELATIVITY PAPERS -->
-    <div style="margin-top: 36px;" id="papers">
+        <div style="margin-top: 36px;" id="papers">
       <h3 style="margin-top: 36px;">
-  <h3>
-  Systems Derived from Invariance Theory
-</h3>
+        Systems Derived from Invariance Theory
+      </h3>
 
 <p style="color: var(--muted); max-width: 760px;">
-Two foundational papers — <strong>Semantic Relativity</strong> and 
-<strong>The Relativity Principle: Regime Formulation</strong> — define 
-relativity as a structural theory of invariant meaning.
+The systems below translate invariant-structure principles into compiler,
+verification, and simulation architectures. The relativity papers above provide
+part of the theoretical background for this operational layer.
 </p>
 
   <!-- AEGON POLICY COMPILER -->
@@ -2964,7 +3071,7 @@ relativity as a structural theory of invariant meaning.
 Formal compiler mapping failure semantics into executable policy structures.
 </p>
     <div class="links">
-      <a href="http://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
+      <a href="https://aadsystems.com/papers/The_AEGON_Policy_Compiler.pdf" target="_blank">Paper</a>
     </div>
   </div>
 
@@ -3051,11 +3158,11 @@ document.addEventListener("DOMContentLoaded", function(){
 
   const navLinks = document.querySelectorAll(".stack-nav a");
 
-  function updateActiveLayer(){
+    function updateActiveLayer(){
     let scrollPos = window.scrollY + window.innerHeight * 0.3;
 
     for (let i = sections.length - 1; i >= 0; i--) {
-  const section = sections[i];
+      const section = sections[i];
       const el = document.getElementById(section.id);
       if(!el) return;
 
@@ -3063,7 +3170,7 @@ document.addEventListener("DOMContentLoaded", function(){
         navLinks.forEach(link => link.classList.remove("active"));
         navLinks[section.link].classList.add("active");
       }
-    });
+    }
   }
 
   window.addEventListener("scroll", updateActiveLayer);
@@ -3095,18 +3202,25 @@ setInterval(updateClock,1000);
 updateClock();
 
 function updatePaperCount(){
-  const papers = document.querySelectorAll(".paper");
-  const count = papers.length;
+  const paperLinks = document.querySelectorAll('a[href*="/papers/"][href$=".pdf"]');
+
+  const uniquePapers = new Set(
+    [...paperLinks].map(link =>
+      new URL(link.href, window.location.href).href.replace(/^http:/, "https:")
+    )
+  );
+
+  const count = uniquePapers.size;
 
   const label = document.getElementById("paper-count");
-if(label){
-  label.textContent = count + " PUBLISHED";
-}
+  if(label){
+    label.textContent = count + " PUBLISHED";
+  }
 
-const label2 = document.getElementById("paper-count-monitor");
-if(label2){
-  label2.textContent = count + " PUBLISHED";
-}
+  const label2 = document.getElementById("paper-count-monitor");
+  if(label2){
+    label2.textContent = count + " PUBLISHED";
+  }
 }
 
 updatePaperCount();
