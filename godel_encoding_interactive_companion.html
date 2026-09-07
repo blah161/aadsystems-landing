@@ -1,0 +1,304 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Executable Gödel Encodings — Interactive Companion</title>
+<style>
+:root{
+  --bg:#0d1117; --panel:#151b23; --panel2:#1b2430; --text:#eef3f8;
+  --muted:#9fb0c3; --line:#2b3949; --accent:#7cc4ff; --good:#8ee3b5;
+  --warm:#ffd38a; --danger:#ff9f9f;
+}
+*{box-sizing:border-box}
+body{margin:0;background:linear-gradient(180deg,#0b1016,#101823);color:var(--text);
+font:16px/1.55 ui-sans-serif,system-ui,-apple-system,BlinkMacSystemFont,"Segoe UI",sans-serif}
+header{padding:42px 24px 24px;max-width:1180px;margin:auto}
+.eyebrow{text-transform:uppercase;letter-spacing:.14em;color:var(--accent);font-size:.78rem;font-weight:700}
+h1{font-size:clamp(2rem,5vw,4rem);line-height:1.02;margin:.35rem 0 1rem}
+.lede{max-width:850px;color:var(--muted);font-size:1.12rem}
+nav{position:sticky;top:0;z-index:5;background:rgba(13,17,23,.92);backdrop-filter:blur(12px);border-block:1px solid var(--line)}
+nav .inner{max-width:1180px;margin:auto;display:flex;gap:8px;padding:10px 18px;overflow:auto}
+button,.tab{border:1px solid var(--line);background:var(--panel);color:var(--text);border-radius:999px;padding:9px 13px;cursor:pointer}
+button:hover,.tab.active{border-color:var(--accent);background:#17283a}
+main{max-width:1180px;margin:auto;padding:26px 24px 70px}
+section{display:none}.show{display:block}
+.grid{display:grid;grid-template-columns:repeat(12,1fr);gap:16px}
+.card{grid-column:span 6;background:linear-gradient(180deg,var(--panel),#121922);border:1px solid var(--line);border-radius:18px;padding:20px}
+.card.full{grid-column:1/-1}.card.third{grid-column:span 4}
+.kicker{color:var(--accent);font-size:.82rem;text-transform:uppercase;letter-spacing:.08em;font-weight:700}
+h2{font-size:1.7rem;margin:.25rem 0 .7rem} h3{margin:.2rem 0 .55rem}
+p{margin:.5rem 0 1rem}.muted{color:var(--muted)}
+.math{font-family:ui-monospace,SFMono-Regular,Menlo,monospace;background:#0b1118;border:1px solid var(--line);
+padding:12px 14px;border-radius:12px;overflow:auto}
+.flow{display:flex;gap:10px;flex-wrap:wrap;align-items:center;margin-top:14px}
+.node{padding:12px 14px;border-radius:13px;background:var(--panel2);border:1px solid var(--line);min-width:135px;text-align:center}
+.arrow{color:var(--muted)}
+.badge{display:inline-block;padding:4px 8px;border-radius:999px;background:#173042;color:#bfe4ff;font-size:.78rem}
+.timeline{display:grid;gap:10px}
+.step{padding:14px 16px;border-left:3px solid var(--line);background:rgba(255,255,255,.025);border-radius:8px}
+.step.active{border-left-color:var(--accent);background:#14283a}
+.theorem{padding:14px;border:1px solid var(--line);border-radius:14px;margin:10px 0;background:#111923;cursor:pointer}
+.theorem:hover{border-color:var(--accent)}
+.detail{display:none;margin-top:9px;color:var(--muted)} .theorem.open .detail{display:block}
+.controls{display:flex;gap:8px;flex-wrap:wrap;margin:10px 0 16px}
+input,select{background:#0b1118;color:var(--text);border:1px solid var(--line);border-radius:10px;padding:9px 10px}
+.example{display:grid;grid-template-columns:1fr 1fr;gap:14px}
+.result{border:1px dashed var(--good);padding:14px;border-radius:12px;background:#102219}
+.note{border-left:4px solid var(--warm);padding:12px 14px;background:#231d12;border-radius:8px}
+.small{font-size:.88rem;color:var(--muted)}
+footer{max-width:1180px;margin:auto;padding:0 24px 50px;color:var(--muted)}
+@media(max-width:800px){.card,.card.third{grid-column:1/-1}.example{grid-template-columns:1fr}}
+</style>
+</head>
+<body>
+<header>
+  <div class="eyebrow">Interactive learning companion</div>
+  <h1>Executable Gödel Encodings</h1>
+  <p class="lede">A structural guide to the paper <em>Executable Gödel Encodings: A Verified Runtime for Logical Syntax</em>. This version is designed to help you learn the architecture of the mathematics: what each construction does, what depends on what, and why the runtime interpretation emerges.</p>
+</header>
+
+<nav><div class="inner" id="tabs">
+  <button class="tab active" data-target="overview">Overview</button>
+  <button class="tab" data-target="syntax">1. Syntax</button>
+  <button class="tab" data-target="encoding">2. Encoding</button>
+  <button class="tab" data-target="substitution">3. Substitution</button>
+  <button class="tab" data-target="simulation">4. Arithmetic simulation</button>
+  <button class="tab" data-target="diagonal">5. Diagonalization</button>
+  <button class="tab" data-target="theorems">Theorem map</button>
+  <button class="tab" data-target="runtime">Runtime interpretation</button>
+</div></nav>
+
+<main>
+<section id="overview" class="show">
+<div class="grid">
+  <div class="card full">
+    <div class="kicker">The central idea</div>
+    <h2>Syntax becomes executable numerical data</h2>
+    <p>The paper starts with ordinary inductive syntax—terms and formulas—then gives those objects numerical representations. Once encoded, transformations of syntax can be simulated by arithmetic operations on codes, while Lean verifies the correspondence.</p>
+    <div class="flow">
+      <div class="node">Terms & formulas</div><div class="arrow">→</div>
+      <div class="node">Gödel codes</div><div class="arrow">→</div>
+      <div class="node">Verified transformations</div><div class="arrow">→</div>
+      <div class="node">Executable logic runtime</div>
+    </div>
+  </div>
+  <div class="card">
+    <div class="kicker">Question to keep in mind</div>
+    <h2>Where does the “runtime” enter?</h2>
+    <p>Not merely when a number represents a formula. The runtime interpretation appears when encoded syntax can be <strong>decoded, transformed, re-encoded, and verified</strong> as part of an executable procedure.</p>
+  </div>
+  <div class="card">
+    <div class="kicker">Learning objective</div>
+    <h2>See the dependency structure</h2>
+    <p>Diagonalization depends on substitution. Arithmetic substitution depends on encoding and decoding. Encoding depends on inductively defined syntax. The paper is therefore a layered construction, not a collection of independent results.</p>
+  </div>
+  <div class="card full">
+    <div class="kicker">Paper roadmap</div>
+    <div class="timeline">
+      <div class="step active"><strong>Formal syntax.</strong> Define finite syntax trees for terms and formulas.</div>
+      <div class="step"><strong>Gödel encoding.</strong> Map those trees injectively into natural numbers and decode valid codes.</div>
+      <div class="step"><strong>Substitution.</strong> Define structural transformations recursively on syntax.</div>
+      <div class="step"><strong>Arithmetic simulation.</strong> Perform the same transformation at the code level by decode → transform → re-encode.</div>
+      <div class="step"><strong>Diagonalization.</strong> Use encoded substitution to construct self-reference.</div>
+      <div class="step"><strong>Runtime interpretation.</strong> Reinterpret the machinery as a verified execution layer for rule engines, DSLs, and compilers.</div>
+    </div>
+  </div>
+</div>
+</section>
+
+<section id="syntax">
+<div class="grid">
+ <div class="card">
+  <div class="kicker">Definition 2.1</div><h2>Terms</h2>
+  <div class="math">Term ::= var(n) | zero | succ(t) | add(t₁,t₂)</div>
+  <p class="muted">Because this is inductive, every term is a finite syntax tree. Structural recursion is therefore available automatically as the natural way to define transformations.</p>
+ </div>
+ <div class="card">
+  <div class="kicker">Definition 2.2</div><h2>Formulas</h2>
+  <div class="math">Formula ::= t₁ = t₂ | ¬φ | φ₁ ∧ φ₂ | ∀xₙ φ</div>
+  <p class="muted">Formulas are built from terms and logical constructors. The same tree structure later makes recursive substitution possible.</p>
+ </div>
+ <div class="card full">
+  <div class="kicker">Why this matters</div><h2>The syntax tree is the first computational object</h2>
+  <p>Before Gödel numbers appear, the syntax is already executable data. Lean's inductive definitions give a finite object that programs can traverse. Gödel encoding then supplies a second representation of that same structure.</p>
+ </div>
+</div>
+</section>
+
+<section id="encoding">
+<div class="grid">
+ <div class="card">
+   <div class="kicker">Encoding</div><h2>Term → Nat</h2>
+   <div class="math">godel : Term → Nat<br><br>def godel : Term → Nat :=<br>  Encodable.encode</div>
+   <p>The code is determined by syntactic structure.</p>
+ </div>
+ <div class="card">
+   <div class="kicker">Decoding</div><h2>Nat → Option Term</h2>
+   <div class="math">decodeTerm : Nat → Option Term<br><br>def decodeTerm : Nat → Option Term :=<br>  Encodable.decode</div>
+   <p>Decoding is partial because an arbitrary natural number need not be a valid code.</p>
+ </div>
+ <div class="card full">
+   <div class="kicker">The key invariant</div><h2>Round-trip correctness</h2>
+   <div class="math">decodeTerm (godel t) = some t</div>
+   <p>This is stronger than saying “we assigned numbers.” It establishes a machine-checked correspondence between the structural object and its code.</p>
+ </div>
+</div>
+</section>
+
+<section id="substitution">
+<div class="grid">
+ <div class="card full">
+  <div class="kicker">Worked example from the paper</div><h2>Structural substitution</h2>
+  <div class="example">
+   <div><div class="small">Original term</div><div class="math">add(var(0), zero)</div></div>
+   <div><div class="small">Replacement</div><div class="math">succ(zero)</div></div>
+  </div>
+  <div class="controls">
+    <button id="runSubst">Run substitution x = 0</button>
+    <button id="resetSubst">Reset</button>
+  </div>
+  <div id="substResult" class="result" style="display:none">
+    <strong>Result:</strong>
+    <div class="math" style="margin-top:8px">add(succ(zero), zero)</div>
+    <p>The recursive traversal reaches <code>var(0)</code>, recognizes the selected variable, and replaces it with <code>succ(zero)</code>. The other branch remains unchanged.</p>
+  </div>
+ </div>
+ <div class="card">
+  <div class="kicker">Theorem 4.3</div><h2>Basic substitution law</h2>
+  <div class="math">substTerm(x, s, var(x)) = s</div>
+ </div>
+ <div class="card">
+  <div class="kicker">Structural recursion</div><h2>Why recursion appears naturally</h2>
+  <p>The definition follows the constructors of the term. A variable is inspected directly; successor recurses into one child; addition recurses into both children.</p>
+ </div>
+</div>
+</section>
+
+<section id="simulation">
+<div class="grid">
+ <div class="card full">
+  <div class="kicker">Definition 5.1</div><h2>Code-level substitution</h2>
+  <p>The paper's central computational move is to perform syntactic substitution through numerical representations.</p>
+  <div class="flow">
+    <div class="node">encoded term + encoded formula</div><div class="arrow">→</div>
+    <div class="node">decode</div><div class="arrow">→</div>
+    <div class="node">structural substitution</div><div class="arrow">→</div>
+    <div class="node">re-encode</div>
+  </div>
+ </div>
+ <div class="card">
+  <div class="kicker">Correctness</div><h2>Theorem 5.2</h2>
+  <div class="math">codeSubst(x, godel(s), godelF(φ))<br>= godelF(substFormula(x,s,φ))</div>
+ </div>
+ <div class="card">
+  <div class="kicker">Interpretation</div><h2>Two representations, one transformation</h2>
+  <p>The left side performs the operation through codes. The right side performs it structurally and then encodes. Their equality is the verified bridge between arithmetic and syntax.</p>
+ </div>
+</div>
+</section>
+
+<section id="diagonal">
+<div class="grid">
+ <div class="card full">
+   <div class="kicker">Self-reference</div><h2>Why diagonalization needs everything before it</h2>
+   <p>A formula can only be made to refer to its own code after syntax can be encoded and substitution can be represented arithmetically.</p>
+   <div class="flow">
+     <div class="node">formula φ(x)</div><div class="arrow">→</div>
+     <div class="node">Gödel code</div><div class="arrow">→</div>
+     <div class="node">encoded substitution</div><div class="arrow">→</div>
+     <div class="node">self-reference</div>
+   </div>
+ </div>
+ <div class="card">
+   <div class="kicker">Diagonal lemma</div><h2>Theorem 6.1</h2>
+   <div class="math">∃ ψ,  ψ ↔ φ(⌜ψ⌝)</div>
+   <p class="muted">For every formula with one free variable, a sentence exists that says of itself what φ says of its code.</p>
+ </div>
+ <div class="card">
+   <div class="kicker">Gödel sentence</div><h2>Choose φ(x) := ¬Prov(x)</h2>
+   <div class="math">G ↔ ¬Prov(⌜G⌝)</div>
+   <p>This produces the familiar self-referential sentence: G says that G is not provable.</p>
+ </div>
+ <div class="card full note">
+   <strong>Important distinction:</strong> the computational contribution of the paper is not merely the classical statement of diagonalization. It is the executable infrastructure—encoded syntax plus verified substitution—that makes the construction algorithmic inside Lean.
+ </div>
+</div>
+</section>
+
+<section id="theorems">
+<div class="grid">
+ <div class="card full">
+  <div class="kicker">Clickable dependency map</div><h2>Main results</h2>
+  <p class="muted">Click each theorem to see what it depends on and what it enables.</p>
+
+  <div class="theorem"><strong>Theorem 3.1 — Injectivity of Gödel encoding</strong>
+    <div class="detail"><span class="badge">depends on</span> inductive syntax + Lean's canonical Encodable instance.<br><span class="badge">enables</span> distinct syntax has distinct numerical representation.</div>
+  </div>
+  <div class="theorem"><strong>Theorem 3.2 — Round-trip correctness</strong>
+    <div class="detail"><span class="badge">depends on</span> encoding + decoding.<br><span class="badge">enables</span> verified recovery of syntax from its valid code.</div>
+  </div>
+  <div class="theorem"><strong>Theorem 4.3 — Basic substitution property</strong>
+    <div class="detail"><span class="badge">depends on</span> recursive definition of substitution.<br><span class="badge">enables</span> confidence that the structural operation has the intended variable-replacement behavior.</div>
+  </div>
+  <div class="theorem"><strong>Theorem 5.2 — Correctness of arithmetic substitution</strong>
+    <div class="detail"><span class="badge">depends on</span> round-trip correctness + structural substitution + formula encoding.<br><span class="badge">enables</span> arithmetic operations on codes to simulate syntactic transformation.</div>
+  </div>
+  <div class="theorem"><strong>Theorem 6.1 — Diagonal Lemma</strong>
+    <div class="detail"><span class="badge">depends on</span> arithmetic representation of substitution.<br><span class="badge">enables</span> construction of self-referential sentences.</div>
+  </div>
+  <div class="theorem"><strong>Theorem 8.1 — Gödel incompleteness result as stated in the paper</strong>
+    <div class="detail"><span class="badge">depends on</span> provability predicate + diagonal lemma + assumptions on the formal system.<br><span class="badge">enables</span> the paper's transition from executable self-reference to the classical incompleteness discussion.</div>
+  </div>
+ </div>
+</div>
+</section>
+
+<section id="runtime">
+<div class="grid">
+ <div class="card full">
+  <div class="kicker">Definition 11.1</div><h2>Gödel runtime representation</h2>
+  <p>The paper abstracts the construction into three ingredients:</p>
+  <div class="flow">
+   <div class="node">1. encoding</div>
+   <div class="node">2. decoding</div>
+   <div class="node">3. verified code operations</div>
+  </div>
+  <p style="margin-top:16px">The third ingredient is decisive: operations on codes must simulate structural transformations on the original expressions.</p>
+ </div>
+ <div class="card">
+   <div class="kicker">Compiler view</div><h2>Syntax as executable data</h2>
+   <p>Substitution, rewriting, normalization, and related compiler transformations can be understood as operations over encoded logical structures, with Lean supplying correctness proofs.</p>
+ </div>
+ <div class="card">
+   <div class="kicker">Why this is more than Gödel numbering</div><h2>Representation becomes infrastructure</h2>
+   <p>The paper's software interpretation is that the encoding is a runtime layer connecting symbolic rules to verified executable transformations.</p>
+ </div>
+ <div class="card full">
+   <div class="kicker">A question for further study</div><h2>What is the invariant being preserved?</h2>
+   <p>At each layer, the same syntactic meaning is represented differently: first as a tree, then as a number, then as a transformed number, and finally again as syntax. The correctness theorems certify that the numerical computation agrees with the intended structural computation. That viewpoint is a useful doorway into the later idea of semantic invariance.</p>
+ </div>
+</div>
+</section>
+</main>
+
+<footer>
+  Built as a private study companion from the March 2026 paper. It intentionally emphasizes conceptual dependencies rather than reproducing the paper page by page.
+</footer>
+
+<script>
+const tabs=[...document.querySelectorAll('.tab')];
+const sections=[...document.querySelectorAll('main section')];
+tabs.forEach(t=>t.addEventListener('click',()=>{
+  tabs.forEach(x=>x.classList.remove('active')); t.classList.add('active');
+  sections.forEach(s=>s.classList.remove('show'));
+  document.getElementById(t.dataset.target).classList.add('show');
+  window.scrollTo({top:0,behavior:'smooth'});
+}));
+document.querySelectorAll('.theorem').forEach(x=>x.addEventListener('click',()=>x.classList.toggle('open')));
+const result=document.getElementById('substResult');
+document.getElementById('runSubst').addEventListener('click',()=>result.style.display='block');
+document.getElementById('resetSubst').addEventListener('click',()=>result.style.display='none');
+</script>
+</body>
+</html>
