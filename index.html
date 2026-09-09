@@ -2243,9 +2243,9 @@ Prevents drift, inconsistency, and misinterpretation across market regimes.
   </div>
 
   <div class="status-row">
-    <span>Next Research Target</span>
-    <span class="status dev">Transformer Simulator</span>
-  </div>
+  <span>Next Research Target</span>
+  <span class="status dev">Transformer Algebra Compiler</span>
+</div>
 
 </div>
 
@@ -2460,9 +2460,9 @@ ultimately become operational software.
   <span class="status active" id="paper-count">INDEXING</span>
 </div>
     <div class="status-row">
-      <span>Transformer LLM Simulator</span>
-      <span class="status dev">DEVELOPMENT</span>
-    </div>
+  <span>Transformer Algebra Compiler</span>
+  <span class="status dev">PLANNED</span>
+</div>
   </div>
 </section>
 <section class="section">
@@ -2511,10 +2511,10 @@ ultimately become operational software.
   <td class="status-dev">DEVELOPMENT</td>
 </tr>
 
-      <tr>
-        <td>Transformer Simulator</td>
-        <td class="status-dev">DEVELOPMENT</td>
-      </tr>
+     <tr>
+  <td>Transformer Algebra Compiler</td>
+  <td class="status-dev">PLANNED</td>
+</tr>
 
       <tr>
         <td>CMOS Silicon Compiler</td>
@@ -2564,9 +2564,14 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
     </div>
 
     <div class="timeline-item">
-      <span class="year">Next</span>
-      <span class="event">Transformer architecture simulator and silicon compiler research</span>
-    </div>
+  <span class="year">Sep 2026</span>
+  <span class="event">Publication of Transformer Algebra: Compositional Semantics and Correct Compilation of Transformer Architectures</span>
+</div>
+
+<div class="timeline-item">
+  <span class="year">Next</span>
+  <span class="event">Implementation of the Transformer Algebra compiler and continued silicon compiler research</span>
+</div>
 
   </div>
 </section>
@@ -2623,12 +2628,27 @@ AAD SYSTEMS OPERATIONAL LAYER READY <span class="cursor">_</span>
       </div>
 </div>
       <div class="card">
-        <h4>Transformer LLM <span class="badge">Upcoming</span></h4>
-        <p>
-          An instruction-level transformer / LLM simulator exposing attention,
-          embeddings, and MLP structure for research and education.
-        </p>
-      </div>
+  <h4>Transformer Algebra <span class="badge">Published</span></h4>
+
+  <p>
+    A compositional semantics and compiler framework for transformer architectures,
+    introducing a typed Transformer Intermediate Representation (TIR), certified
+    architecture transformations, and representation-aware backend compilation.
+  </p>
+
+  <p style="color:var(--muted);">
+    Establishes semantic-preservation guarantees for source transformations,
+    backend lowering, end-to-end compiler pipelines, and finite-precision execution.
+  </p>
+
+  <div class="links">
+    <a href="https://aadsystems.com/papers/Transformer_Algebra.pdf"
+       target="_blank"
+       rel="noopener noreferrer">
+      Read Paper →
+    </a>
+  </div>
+</div>
 <div class="card">
   <h4>VERIX Core <span class="badge">Upcoming</span></h4>
   <p>
@@ -3087,13 +3107,22 @@ Deterministic verification engine ensuring structural correctness of execution l
   </div>
 
   <!-- FUTURE SYSTEMS -->
-  <div class="card">
-    <h4>Transformer Simulator <span class="badge">Development</span></h4>
-    <p>
-      An instruction-level transformer / LLM simulator exposing attention,
-      embeddings, and MLP structure for research and education.
-    </p>
-  </div>
+<div class="card">
+  <h4>Transformer Algebra Compiler <span class="badge">Planned</span></h4>
+
+  <p>
+    A compiler implementation of the Transformer Algebra framework, lowering
+    typed transformer architectures from TIR into executable backend
+    representations while preserving the semantic contracts established by
+    the formal system.
+  </p>
+
+  <p style="color:var(--muted);">
+    Intended for transformer and LLM architectures, with certified source
+    transformations, backend lowering, and explicit numerical correctness
+    obligations.
+  </p>
+</div>
 
   <div class="card">
     <h4>CMOS Silicon Compiler <span class="badge">Research</span></h4>
